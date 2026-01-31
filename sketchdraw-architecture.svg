@@ -1,0 +1,276 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 803.6666666666666 1404" width="803.6666666666666" height="1404">
+  <rect width="803.6666666666666" height="1404" fill="white"/>
+  <text x="401.8333333333333" y="12.299999999999999" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="18" fill="#333333" font-weight="bold"><tspan x="401.8333333333333" dy="0">Sketchdraw</tspan><tspan x="401.8333333333333" dy="23.400000000000002">Architecture</tspan></text>
+  <g transform="translate(0, 40)">
+<g class="group" data-id="entry">
+<path d="M 229.7 52.1 L 752.6 51.1 L 751.2 270.8 L 233.6 272.0 Z" fill="#4A90D9" fill-opacity="0.05" stroke="none"/>
+<path d="M 228.9 52.7 Q 491.3 50.6 753.4 51.0" fill="none" stroke="#4A90D9" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="6,4"/>
+<path d="M 229.3 51.9 Q 490.1 50.6 752.1 51.4" fill="none" stroke="#4A90D9" stroke-width="0.75" stroke-linecap="round" opacity="0.3" stroke-dasharray="6,4"/>
+<path d="M 753.1 50.2 Q 752.0 162.3 751.2 270.0" fill="none" stroke="#4A90D9" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="6,4"/>
+<path d="M 752.6 51.0 Q 753.3 160.8 750.9 270.2" fill="none" stroke="#4A90D9" stroke-width="0.75" stroke-linecap="round" opacity="0.3" stroke-dasharray="6,4"/>
+<path d="M 752.0 271.4 Q 490.5 273.4 233.7 272.6" fill="none" stroke="#4A90D9" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="6,4"/>
+<path d="M 751.0 270.5 Q 492.9 270.8 233.4 272.2" fill="none" stroke="#4A90D9" stroke-width="0.75" stroke-linecap="round" opacity="0.3" stroke-dasharray="6,4"/>
+<path d="M 233.6 271.4 Q 231.1 160.3 229.6 51.8" fill="none" stroke="#4A90D9" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="6,4"/>
+<path d="M 234.2 272.1 Q 230.4 160.3 229.2 52.7" fill="none" stroke="#4A90D9" stroke-width="0.75" stroke-linecap="round" opacity="0.3" stroke-dasharray="6,4"/>
+<text x="243.66666666666666" y="66" text-anchor="start" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="12" fill="#4A90D9">Entry Points</text>
+</g>
+<g class="group" data-id="layout">
+<path d="M 65.7 662.8 L 674.7 662.2 L 678.0 780.8 L 66.7 781.6 Z" fill="#50C878" fill-opacity="0.05" stroke="none"/>
+<path d="M 65.1 663.4 Q 370.0 663.5 675.4 661.4" fill="none" stroke="#50C878" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="6,4"/>
+<path d="M 65.9 662.7 Q 368.4 661.0 674.4 662.2" fill="none" stroke="#50C878" stroke-width="0.75" stroke-linecap="round" opacity="0.3" stroke-dasharray="6,4"/>
+<path d="M 675.7 661.9 Q 676.4 719.9 678.5 780.3" fill="none" stroke="#50C878" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="6,4"/>
+<path d="M 674.7 662.1 Q 677.0 723.1 678.5 780.7" fill="none" stroke="#50C878" stroke-width="0.75" stroke-linecap="round" opacity="0.3" stroke-dasharray="6,4"/>
+<path d="M 678.6 781.5 Q 374.3 780.5 67.2 781.7" fill="none" stroke="#50C878" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="6,4"/>
+<path d="M 677.8 780.6 Q 373.7 781.3 66.5 781.5" fill="none" stroke="#50C878" stroke-width="0.75" stroke-linecap="round" opacity="0.3" stroke-dasharray="6,4"/>
+<path d="M 65.9 781.6 Q 66.5 722.8 65.6 661.8" fill="none" stroke="#50C878" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="6,4"/>
+<path d="M 66.7 782.1 Q 67.0 721.8 65.3 662.7" fill="none" stroke="#50C878" stroke-width="0.75" stroke-linecap="round" opacity="0.3" stroke-dasharray="6,4"/>
+<text x="78" y="676" text-anchor="start" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="12" fill="#50C878">Layout Engines</text>
+</g>
+<g class="group" data-id="output">
+<path d="M 66.8 1091.6 L 646.6 1091.5 L 648.5 1313.7 L 65.7 1311.9 Z" fill="#DDA0DD" fill-opacity="0.05" stroke="none"/>
+<path d="M 66.1 1091.4 Q 358.0 1091.7 645.9 1092.1" fill="none" stroke="#DDA0DD" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="6,4"/>
+<path d="M 67.0 1091.4 Q 356.3 1089.9 646.3 1091.3" fill="none" stroke="#DDA0DD" stroke-width="0.75" stroke-linecap="round" opacity="0.3" stroke-dasharray="6,4"/>
+<path d="M 646.0 1091.0 Q 646.8 1203.1 649.5 1313.1" fill="none" stroke="#DDA0DD" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="6,4"/>
+<path d="M 647.0 1091.0 Q 648.2 1202.7 648.3 1313.4" fill="none" stroke="#DDA0DD" stroke-width="0.75" stroke-linecap="round" opacity="0.3" stroke-dasharray="6,4"/>
+<path d="M 649.4 1314.2 Q 356.3 1311.5 65.9 1311.9" fill="none" stroke="#DDA0DD" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="6,4"/>
+<path d="M 648.3 1313.6 Q 357.1 1312.3 65.6 1311.8" fill="none" stroke="#DDA0DD" stroke-width="0.75" stroke-linecap="round" opacity="0.3" stroke-dasharray="6,4"/>
+<path d="M 65.0 1312.4 Q 65.6 1201.2 66.7 1090.7" fill="none" stroke="#DDA0DD" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="6,4"/>
+<path d="M 65.4 1312.4 Q 65.7 1201.9 67.3 1092.2" fill="none" stroke="#DDA0DD" stroke-width="0.75" stroke-linecap="round" opacity="0.3" stroke-dasharray="6,4"/>
+<text x="79.66666666666666" y="1106" text-anchor="start" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="12" fill="#DDA0DD">Output</text>
+</g>
+<g class="edge" data-from="cli" data-to="api">
+<path d="M 420.0 129.4 Q 421.2 143.9 420.7 160.6" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 420.2 130.2 Q 421.9 144.4 420.5 159.5" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 421.0 159.3 Q 387.9 162.0 354.1 159.1" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 420.0 159.6 Q 387.3 158.7 354.7 159.7" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 354.8 159.8 Q 353.2 164.4 355.2 170.2" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 354.9 160.0 Q 354.1 165.5 354.3 169.5" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<polygon points="354.1,169.9 349.5,160.9 359.8,161.8" fill="#666666" stroke="#666666" stroke-width="0.75" stroke-linejoin="round"/>
+<rect x="346.2" y="148.0" width="82.0" height="20.0" rx="3" ry="3" fill="white" fill-opacity="0.9" stroke="none"/>
+<text x="387.1666666666667" y="158" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="12" fill="#666666">JSON input</text>
+</g>
+<g class="edge" data-from="mcp" data-to="api">
+<path d="M 216.6 130.3 Q 215.6 136.3 216.7 139.1" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 216.2 130.4 Q 217.2 135.7 216.3 139.5" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 217.6 140.1 Q 235.3 141.0 253.4 140.3" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 216.5 139.9 Q 235.0 140.0 254.7 140.4" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 253.4 140.5 Q 256.0 155.2 253.9 170.2" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 254.5 140.5 Q 252.4 154.9 254.1 170.5" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<polygon points="253.8,169.4 249.9,161.5 259.7,162.3" fill="#666666" stroke="#666666" stroke-width="0.75" stroke-linejoin="round"/>
+<rect x="194.5" y="128.0" width="82.0" height="20.0" rx="3" ry="3" fill="white" fill-opacity="0.9" stroke="none"/>
+<text x="235.5" y="138" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="12" fill="#666666">tool calls</text>
+</g>
+<g class="edge" data-from="api" data-to="schema">
+<path d="M 495.8 242.1 Q 495.9 339.7 496.3 437.2" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 496.3 242.4 Q 496.5 338.0 496.6 436.9" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<polygon points="495.9,436.8 489.8,428.4 502.3,429.5" fill="#666666" stroke="#666666" stroke-width="0.75" stroke-linejoin="round"/>
+<rect x="462.0" y="327.5" width="68.0" height="20.0" rx="3" ry="3" fill="white" fill-opacity="0.9" stroke="none"/>
+<text x="496" y="337.5" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="12" fill="#666666">validate</text>
+</g>
+<g class="edge" data-from="schema" data-to="flow_layout">
+<path d="M 540.7 496.6 Q 543.0 595.7 540.1 692.9" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="8,4"/>
+<path d="M 541.3 497.4 Q 541.5 596.2 540.6 692.0" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3" stroke-dasharray="8,4"/>
+<polygon points="541.3,692.3 534.8,683.1 545.9,683.4" fill="#666666" stroke="#666666" stroke-width="0.75" stroke-linejoin="round"/>
+<rect x="521.0" y="582.5" width="40.0" height="20.0" rx="3" ry="3" fill="white" fill-opacity="0.9" stroke="none"/>
+<text x="541" y="592.5" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="12" fill="#666666">flow</text>
+</g>
+<g class="edge" data-from="schema" data-to="seq_layout">
+<path d="M 451.6 497.2 Q 450.0 501.7 451.0 507.6" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="8,4"/>
+<path d="M 450.7 497.2 Q 452.2 501.1 450.7 506.9" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3" stroke-dasharray="8,4"/>
+<path d="M 450.2 507.2 Q 352.5 507.5 255.7 506.3" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="8,4"/>
+<path d="M 450.9 507.5 Q 353.6 506.6 255.4 506.5" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3" stroke-dasharray="8,4"/>
+<path d="M 256.7 507.1 Q 255.1 600.3 255.0 692.6" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="8,4"/>
+<path d="M 255.6 506.9 Q 255.5 598.0 255.4 691.7" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3" stroke-dasharray="8,4"/>
+<polygon points="256.3,691.5 251.0,683.0 260.5,684.0" fill="#666666" stroke="#666666" stroke-width="0.75" stroke-linejoin="round"/>
+<rect x="319.5" y="495.0" width="68.0" height="20.0" rx="3" ry="3" fill="white" fill-opacity="0.9" stroke="none"/>
+<text x="353.5" y="505" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="12" fill="#666666">sequence</text>
+</g>
+<g class="edge" data-from="flow_layout" data-to="renderer">
+<path d="M 541.0 752.5 Q 542.5 809.7 542.0 866.6" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 541.0 752.2 Q 541.9 808.6 540.7 866.9" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<polygon points="540.8,867.0 535.8,858.8 545.9,858.9" fill="#666666" stroke="#666666" stroke-width="0.75" stroke-linejoin="round"/>
+</g>
+<g class="edge" data-from="seq_layout" data-to="renderer">
+<path d="M 256.4 752.6 Q 256.0 773.9 256.8 796.9" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 255.6 751.9 Q 255.7 773.8 256.3 797.5" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 256.0 796.0 Q 343.1 797.5 428.5 797.1" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 255.8 796.9 Q 340.6 798.0 427.2 796.6" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 428.2 797.4 Q 426.9 833.7 428.1 866.7" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 427.8 796.7 Q 427.5 832.3 428.0 867.2" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<polygon points="428.1,867.5 421.7,857.9 433.7,858.3" fill="#666666" stroke="#666666" stroke-width="0.75" stroke-linejoin="round"/>
+</g>
+<g class="edge" data-from="renderer" data-to="svg_out">
+<path d="M 484.0 926.5 Q 485.9 1023.9 484.5 1122.6" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 484.2 926.5 Q 485.6 1025.9 484.0 1121.8" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<polygon points="484.1,1122.1 479.3,1114.1 489.9,1114.1" fill="#666666" stroke="#666666" stroke-width="0.75" stroke-linejoin="round"/>
+<rect x="443.3" y="1012.5" width="82.0" height="20.0" rx="3" ry="3" fill="white" fill-opacity="0.9" stroke="none"/>
+<text x="484.33333333333337" y="1022.5" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="12" fill="#666666">SVG string</text>
+</g>
+<g class="edge" data-from="svg_out" data-to="png_export">
+<path d="M 479.8 129.7 Q 481.3 148.1 480.8 170.2" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="8,4"/>
+<path d="M 480.6 130.3 Q 479.1 149.3 479.9 170.0" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3" stroke-dasharray="8,4"/>
+<polygon points="480.3,169.8 473.9,160.7 484.8,162.2" fill="#666666" stroke="#666666" stroke-width="0.75" stroke-linejoin="round"/>
+<rect x="449.5" y="138.0" width="61.0" height="20.0" rx="3" ry="3" fill="white" fill-opacity="0.9" stroke="none"/>
+<text x="480" y="148" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="12" fill="#666666">convert</text>
+</g>
+<g class="edge" data-from="svg_out" data-to="preview">
+<path d="M 432.8 129.5 Q 431.4 133.1 433.6 140.8" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 433.7 129.5 Q 433.0 134.8 433.9 139.7" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 432.7 139.1 Q 323.1 140.3 210.1 140.0" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 433.8 140.5 Q 321.6 138.6 210.3 140.4" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 209.4 139.1 Q 210.1 154.2 211.0 169.4" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 210.1 140.4 Q 211.7 156.5 209.6 170.3" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<polygon points="209.5,170.5 204.2,162.4 214.7,162.5" fill="#666666" stroke="#666666" stroke-width="0.75" stroke-linejoin="round"/>
+<rect x="301.7" y="128.0" width="40.0" height="20.0" rx="3" ry="3" fill="white" fill-opacity="0.9" stroke="none"/>
+<text x="321.66666666666663" y="138" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="12" fill="#666666">push</text>
+</g>
+<g class="edge" data-from="mcp" data-to="store">
+<path d="M 335.5 142.9 Q 336.6 215.7 334.5 286.8" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3,3"/>
+<path d="M 335.0 142.4 Q 333.7 213.1 335.3 286.5" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3" stroke-dasharray="3,3"/>
+<path d="M 334.5 286.7 Q 193.8 288.5 55.5 286.6" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3,3"/>
+<path d="M 334.5 286.8 Q 193.9 287.0 55.6 287.0" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3" stroke-dasharray="3,3"/>
+<path d="M 55.6 287.1 Q 53.9 652.5 55.4 1016.6" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3,3"/>
+<path d="M 55.5 287.1 Q 55.5 651.6 54.9 1017.4" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3" stroke-dasharray="3,3"/>
+<path d="M 54.5 1017.4 Q 151.9 1018.9 248.3 1017.6" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3,3"/>
+<path d="M 54.8 1016.5 Q 151.2 1018.5 249.2 1017.3" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3" stroke-dasharray="3,3"/>
+<path d="M 250.0 1016.5 Q 251.0 1068.8 249.4 1122.6" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3,3"/>
+<path d="M 249.4 1016.4 Q 249.0 1070.5 249.5 1122.4" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3" stroke-dasharray="3,3"/>
+<polygon points="249.5,1122.0 244.4,1113.0 254.9,1113.0" fill="#666666" stroke="#666666" stroke-width="0.75" stroke-linejoin="round"/>
+<rect x="24.5" y="640.0" width="61.0" height="20.0" rx="3" ry="3" fill="white" fill-opacity="0.9" stroke="none"/>
+<text x="55" y="650" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="12" fill="#666666">persist</text>
+</g>
+<g class="node" data-id="cli">
+<path d="M 501.8 82.8 L 723.5 80.8 L 720.1 142.9 L 502.6 141.7 Z" fill="#4A90D9" fill-opacity="0.15" stroke="none"/>
+<path d="M 502.4 83.3 Q 612.0 81.7 724.4 80.3" fill="none" stroke="#346598" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 501.3 82.7 Q 613.1 83.2 723.3 80.5" fill="none" stroke="#346598" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 723.8 80.0 Q 721.5 110.7 720.8 142.1" fill="none" stroke="#346598" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 723.9 80.4 Q 721.7 112.7 720.0 142.4" fill="none" stroke="#346598" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 719.3 142.4 Q 612.1 140.9 502.1 142.4" fill="none" stroke="#346598" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 720.0 142.7 Q 609.7 140.6 503.0 141.6" fill="none" stroke="#346598" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 502.0 142.5 Q 502.7 110.8 502.5 83.5" fill="none" stroke="#346598" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 502.6 142.0 Q 502.1 112.8 501.4 82.8" fill="none" stroke="#346598" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<text x="611.6666666666666" y="112" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="14" fill="#333333">CLI
+(Commander.js)</text>
+</g>
+<g class="node" data-id="mcp">
+<path d="M 262.4 82.4 L 480.8 81.6 L 482.4 140.2 L 261.7 143.3 Z" fill="#4A90D9" fill-opacity="0.15" stroke="none"/>
+<path d="M 263.2 82.9 Q 372.3 82.1 480.7 81.1" fill="none" stroke="#346598" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 261.8 82.1 Q 372.0 83.2 480.9 81.9" fill="none" stroke="#346598" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 481.4 82.6 Q 481.2 111.6 483.2 141.0" fill="none" stroke="#346598" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 480.6 81.9 Q 481.3 112.0 482.0 139.6" fill="none" stroke="#346598" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 483.4 139.8 Q 372.7 141.5 262.0 144.0" fill="none" stroke="#346598" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 482.7 140.2 Q 372.3 143.1 261.2 143.9" fill="none" stroke="#346598" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 262.2 143.2 Q 261.9 113.3 261.6 81.8" fill="none" stroke="#346598" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 261.9 142.9 Q 263.6 114.3 261.8 82.1" fill="none" stroke="#346598" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<text x="371.66666666666663" y="112" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="14" fill="#333333">MCP Server
+(Stdio)</text>
+</g>
+<g class="node" data-id="api">
+<path d="M 347.0 180.2 L 646.7 182.8 L 646.0 242.1 L 346.9 241.7 Z" fill="#4A90D9" fill-opacity="0.15" stroke="none"/>
+<path d="M 347.6 181.1 Q 497.3 179.7 646.9 183.8" fill="none" stroke="#346598" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 347.5 180.0 Q 497.7 180.8 647.3 182.3" fill="none" stroke="#346598" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 647.3 183.6 Q 645.1 212.6 646.4 241.7" fill="none" stroke="#346598" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 646.2 182.3 Q 648.2 212.9 645.4 241.5" fill="none" stroke="#346598" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 646.5 242.9 Q 498.3 240.9 346.0 240.9" fill="none" stroke="#346598" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 646.1 241.8 Q 495.4 243.6 346.8 242.1" fill="none" stroke="#346598" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 347.9 241.0 Q 347.4 212.1 346.9 179.9" fill="none" stroke="#346598" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 346.4 241.2 Q 346.3 209.0 347.2 179.7" fill="none" stroke="#346598" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<text x="496" y="202.9" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="14" fill="#333333"><tspan x="496" dy="0">Core API</tspan><tspan x="496" dy="18.2">generateDiagram()</tspan></text>
+</g>
+<g class="node" data-id="schema">
+<path d="M 497.2 435.0 L 631.9 467.1 L 495.4 495.4 L 361.9 466.3 Z" fill="#F5A623" fill-opacity="0.15" stroke="none"/>
+<path d="M 497.1 435.0 Q 563.2 452.8 631.5 467.1" fill="none" stroke="#ac7419" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 496.7 435.2 Q 562.9 449.8 631.7 467.1" fill="none" stroke="#ac7419" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 631.5 466.7 Q 563.9 481.0 494.6 495.3" fill="none" stroke="#ac7419" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 631.9 467.3 Q 562.3 482.6 495.3 495.7" fill="none" stroke="#ac7419" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 495.2 496.2 Q 428.8 480.0 361.6 465.5" fill="none" stroke="#ac7419" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 495.6 495.4 Q 430.2 481.5 361.5 466.5" fill="none" stroke="#ac7419" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 362.0 466.0 Q 427.7 451.8 496.6 434.6" fill="none" stroke="#ac7419" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 362.1 465.7 Q 429.8 448.9 496.9 434.6" fill="none" stroke="#ac7419" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<text x="496" y="457.9" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="14" fill="#333333"><tspan x="496" dy="0">Schema Validation</tspan><tspan x="496" dy="18.2">(Zod)</tspan></text>
+</g>
+<g class="node" data-id="flow_layout">
+<path d="M 436.0 692.0 L 645.3 692.1 L 644.7 750.8 L 436.1 751.9 Z" fill="#50C878" fill-opacity="0.15" stroke="none"/>
+<path d="M 435.4 692.8 Q 540.6 693.3 645.0 691.2" fill="none" stroke="#388c54" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 436.3 692.5 Q 540.2 692.1 645.1 692.3" fill="none" stroke="#388c54" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 646.0 692.5 Q 644.7 722.7 644.6 750.3" fill="none" stroke="#388c54" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 644.9 692.5 Q 645.7 723.4 644.5 750.6" fill="none" stroke="#388c54" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 644.1 751.2 Q 542.2 751.4 436.4 752.6" fill="none" stroke="#388c54" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 644.2 750.6 Q 539.8 750.0 436.4 752.4" fill="none" stroke="#388c54" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 436.2 752.2 Q 434.8 722.5 435.7 691.2" fill="none" stroke="#388c54" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 436.3 751.7 Q 434.4 721.9 435.9 692.6" fill="none" stroke="#388c54" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<text x="541" y="722" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="14" fill="#333333">Flow Layout
+(ELK)</text>
+</g>
+<g class="node" data-id="seq_layout">
+<path d="M 94.8 693.8 L 414.8 690.8 L 417.7 750.2 L 97.3 753.7 Z" fill="#50C878" fill-opacity="0.15" stroke="none"/>
+<path d="M 95.3 693.9 Q 253.2 693.4 413.9 690.5" fill="none" stroke="#388c54" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 95.3 693.6 Q 255.3 690.9 415.1 691.0" fill="none" stroke="#388c54" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 415.3 691.5 Q 417.8 720.2 416.8 751.0" fill="none" stroke="#388c54" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 414.3 690.3 Q 414.7 719.4 418.0 750.8" fill="none" stroke="#388c54" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 417.5 750.5 Q 257.2 753.9 96.6 753.1" fill="none" stroke="#388c54" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 417.1 749.7 Q 255.8 751.4 97.8 753.5" fill="none" stroke="#388c54" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 96.5 753.0 Q 97.8 725.7 95.0 693.1" fill="none" stroke="#388c54" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 97.7 753.3 Q 96.5 723.3 94.2 693.8" fill="none" stroke="#388c54" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<text x="256" y="712.9" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="14" fill="#333333"><tspan x="256" dy="0">Sequence Layout</tspan><tspan x="256" dy="18.2">(Procedural)</tspan></text>
+</g>
+<g class="node" data-id="renderer">
+<path d="M 397.4 866.3 L 569.1 866.0 L 653.3 895.7 L 569.3 927.4 L 398.1 926.9 L 312.6 895.8 Z" fill="#E85D75" fill-opacity="0.15" stroke="none"/>
+<path d="M 396.7 866.9 Q 481.4 865.1 568.7 866.8" fill="none" stroke="#a24152" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 397.1 866.5 Q 483.9 865.8 569.0 865.6" fill="none" stroke="#a24152" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 568.3 866.1 Q 612.6 879.5 654.0 894.8" fill="none" stroke="#a24152" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 568.6 865.5 Q 610.6 879.0 653.0 895.1" fill="none" stroke="#a24152" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 652.4 895.3 Q 612.8 910.4 568.8 927.7" fill="none" stroke="#a24152" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 653.3 895.2 Q 609.5 912.3 569.0 926.8" fill="none" stroke="#a24152" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 568.4 926.9 Q 482.6 927.7 398.7 927.0" fill="none" stroke="#a24152" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 569.3 927.3 Q 484.7 929.0 398.1 926.4" fill="none" stroke="#a24152" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 398.3 926.3 Q 355.1 911.2 312.3 896.3" fill="none" stroke="#a24152" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 397.6 926.4 Q 355.4 912.1 312.6 896.2" fill="none" stroke="#a24152" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 312.1 895.4 Q 356.7 882.0 397.6 865.3" fill="none" stroke="#a24152" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 312.6 895.8 Q 353.9 882.1 397.2 866.5" fill="none" stroke="#a24152" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<text x="484.33333333333337" y="887.9" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="14" fill="#333333"><tspan x="484.33333333333337" dy="0">SVG Renderer</tspan><tspan x="484.33333333333337" dy="18.2">(Themes + Jitter)</tspan></text>
+</g>
+<g class="node" data-id="svg_out">
+<rect x="414.3" y="1131.0" width="140.0" height="42.0" fill="#DDA0DD" fill-opacity="0.15" stroke="none"/>
+<path d="M 552.5 1171.5 C 545.6 1174.8, 541.3 1175.6, 534.6 1177.5 C 515.0 1178.3, 505.1 1179.3, 484.0 1181.2 C 464.7 1179.3, 454.2 1179.9, 434.8 1178.9 C 428.1 1175.9, 423.6 1174.0, 416.1 1171.0 C 423.6 1169.8, 426.2 1167.9, 434.5 1167.3 C 454.0 1165.7, 463.9 1165.1, 483.3 1165.2 C 503.0 1165.3, 514.4 1166.2, 534.6 1165.3 C 542.5 1167.2, 545.3 1169.9, 552.5 1171.5 Z" fill="#DDA0DD" fill-opacity="0.15" stroke="#9b709b" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 552.5 1171.5 C 545.6 1174.8, 541.3 1175.6, 534.6 1177.5 C 515.0 1178.3, 505.1 1179.3, 484.0 1181.2 C 464.7 1179.3, 454.2 1179.9, 434.8 1178.9 C 428.1 1175.9, 423.6 1174.0, 416.1 1171.0 C 423.6 1169.8, 426.2 1167.9, 434.5 1167.3 C 454.0 1165.7, 463.9 1165.1, 483.3 1165.2 C 503.0 1165.3, 514.4 1166.2, 534.6 1165.3 C 542.5 1167.2, 545.3 1169.9, 552.5 1171.5 Z" fill="none" stroke="#9b709b" stroke-width="0.75" stroke-linecap="round" opacity="0.3" transform="translate(-0.3, -0.2)"/>
+<path d="M 415.0 1130.2 Q 413.3 1151.0 413.9 1172.4" fill="none" stroke="#9b709b" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 414.3 1131.1 Q 413.2 1150.8 413.8 1173.4" fill="none" stroke="#9b709b" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 554.1 1130.2 Q 552.3 1151.6 553.6 1172.7" fill="none" stroke="#9b709b" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 554.4 1131.3 Q 555.4 1153.7 554.0 1173.0" fill="none" stroke="#9b709b" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 553.4 1132.0 C 545.2 1133.9, 541.3 1135.5, 534.2 1137.0 C 513.9 1137.6, 505.5 1139.5, 485.8 1140.7 C 464.7 1139.4, 456.1 1139.1, 435.6 1139.2 C 426.1 1134.8, 421.7 1134.0, 413.9 1129.1 C 422.7 1127.8, 426.1 1128.2, 434.7 1126.3 C 454.8 1123.6, 465.5 1122.2, 484.8 1121.0 C 506.0 1121.7, 514.9 1123.8, 535.5 1124.8 C 542.6 1128.5, 546.8 1129.7, 553.4 1132.0 Z" fill="#DDA0DD" fill-opacity="0.15" stroke="#9b709b" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 553.4 1132.0 C 545.2 1133.9, 541.3 1135.5, 534.2 1137.0 C 513.9 1137.6, 505.5 1139.5, 485.8 1140.7 C 464.7 1139.4, 456.1 1139.1, 435.6 1139.2 C 426.1 1134.8, 421.7 1134.0, 413.9 1129.1 C 422.7 1127.8, 426.1 1128.2, 434.7 1126.3 C 454.8 1123.6, 465.5 1122.2, 484.8 1121.0 C 506.0 1121.7, 514.9 1123.8, 535.5 1124.8 C 542.6 1128.5, 546.8 1129.7, 553.4 1132.0 Z" fill="none" stroke="#9b709b" stroke-width="0.75" stroke-linecap="round" opacity="0.3" transform="translate(0.1, -0.4)"/>
+<text x="484.33333333333337" y="1156.5" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="14" fill="#333333">SVG Output</text>
+</g>
+<g class="node" data-id="png_export">
+<rect x="397.7" y="1231.0" width="220.0" height="42.0" fill="#DDA0DD" fill-opacity="0.15" stroke="none"/>
+<path d="M 617.5 1273.6 C 604.4 1275.3, 599.7 1277.2, 587.2 1279.1 C 555.8 1279.5, 541.4 1280.5, 509.2 1280.6 C 478.2 1280.4, 463.0 1279.9, 430.9 1278.2 C 418.2 1275.1, 411.2 1274.8, 399.6 1272.6 C 411.4 1271.2, 417.7 1269.3, 430.9 1267.0 C 462.2 1264.6, 476.6 1265.2, 506.7 1262.4 C 538.0 1263.0, 554.2 1264.6, 585.0 1265.4 C 598.6 1269.7, 603.8 1269.3, 617.5 1273.6 Z" fill="#DDA0DD" fill-opacity="0.15" stroke="#9b709b" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 617.5 1273.6 C 604.4 1275.3, 599.7 1277.2, 587.2 1279.1 C 555.8 1279.5, 541.4 1280.5, 509.2 1280.6 C 478.2 1280.4, 463.0 1279.9, 430.9 1278.2 C 418.2 1275.1, 411.2 1274.8, 399.6 1272.6 C 411.4 1271.2, 417.7 1269.3, 430.9 1267.0 C 462.2 1264.6, 476.6 1265.2, 506.7 1262.4 C 538.0 1263.0, 554.2 1264.6, 585.0 1265.4 C 598.6 1269.7, 603.8 1269.3, 617.5 1273.6 Z" fill="none" stroke="#9b709b" stroke-width="0.75" stroke-linecap="round" opacity="0.3" transform="translate(0.4, 0.8)"/>
+<path d="M 397.0 1231.9 Q 396.0 1253.6 396.9 1272.6" fill="none" stroke="#9b709b" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 397.5 1231.3 Q 398.8 1250.9 397.6 1273.4" fill="none" stroke="#9b709b" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 617.7 1230.1 Q 618.0 1252.0 616.7 1273.8" fill="none" stroke="#9b709b" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 618.3 1231.0 Q 618.7 1251.6 617.9 1273.5" fill="none" stroke="#9b709b" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 619.1 1230.8 C 606.2 1233.7, 599.1 1235.3, 585.1 1237.6 C 553.9 1239.3, 537.8 1239.3, 506.5 1241.1 C 476.5 1238.3, 460.2 1238.1, 429.4 1235.4 C 417.3 1233.8, 409.6 1233.1, 398.1 1230.8 C 411.2 1228.1, 416.7 1227.1, 430.8 1223.9 C 462.2 1223.5, 478.5 1221.8, 509.6 1221.1 C 540.3 1223.6, 556.0 1224.5, 586.6 1225.3 C 600.6 1227.8, 605.3 1228.5, 619.1 1230.8 Z" fill="#DDA0DD" fill-opacity="0.15" stroke="#9b709b" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 619.1 1230.8 C 606.2 1233.7, 599.1 1235.3, 585.1 1237.6 C 553.9 1239.3, 537.8 1239.3, 506.5 1241.1 C 476.5 1238.3, 460.2 1238.1, 429.4 1235.4 C 417.3 1233.8, 409.6 1233.1, 398.1 1230.8 C 411.2 1228.1, 416.7 1227.1, 430.8 1223.9 C 462.2 1223.5, 478.5 1221.8, 509.6 1221.1 C 540.3 1223.6, 556.0 1224.5, 586.6 1225.3 C 600.6 1227.8, 605.3 1228.5, 619.1 1230.8 Z" fill="none" stroke="#9b709b" stroke-width="0.75" stroke-linecap="round" opacity="0.3" transform="translate(0.6, 0.7)"/>
+<text x="507.66666666666663" y="1256.5" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="14" fill="#333333">PNG Export
+(Resvg)</text>
+</g>
+<g class="node" data-id="preview">
+<path d="M 238.3 1231.2 C 264.1 1220.1, 349.1 1225.3, 328.3 1235.7 C 389.9 1238.2, 382.1 1253.7, 355.3 1254.0 C 379.4 1267.3, 350.9 1274.4, 321.4 1268.5 C 279.0 1281.2, 197.4 1279.6, 237.1 1274.1 C 181.5 1277.3, 127.2 1274.4, 153.8 1271.7 C 91.9 1267.9, 94.0 1255.1, 119.7 1253.7 C 85.0 1235.3, 127.1 1226.1, 146.2 1235.0 C 168.1 1220.2, 208.9 1217.9, 238.3 1231.2 Z" fill="#87CEEB" fill-opacity="0.15" stroke="#5f90a5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 238.3 1231.2 C 264.1 1220.1, 349.1 1225.3, 328.3 1235.7 C 389.9 1238.2, 382.1 1253.7, 355.3 1254.0 C 379.4 1267.3, 350.9 1274.4, 321.4 1268.5 C 279.0 1281.2, 197.4 1279.6, 237.1 1274.1 C 181.5 1277.3, 127.2 1274.4, 153.8 1271.7 C 91.9 1267.9, 94.0 1255.1, 119.7 1253.7 C 85.0 1235.3, 127.1 1226.1, 146.2 1235.0 C 168.1 1220.2, 208.9 1217.9, 238.3 1231.2 Z" fill="none" stroke="#5f90a5" stroke-width="0.75" stroke-linecap="round" opacity="0.2" transform="translate(-0.1, -0.5)"/>
+<text x="237.66666666666666" y="1245.3000000000002" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="14" fill="#333333"><tspan x="237.66666666666666" dy="0">Live Preview</tspan><tspan x="237.66666666666666" dy="18.2">(WebSocket)</tspan></text>
+</g>
+<g class="node" data-id="store">
+<rect x="104.3" y="1131.0" width="290.0" height="42.0" fill="#DDA0DD" fill-opacity="0.15" stroke="none"/>
+<path d="M 393.3 1173.3 C 375.6 1175.7, 367.3 1176.1, 351.3 1178.7 C 311.1 1181.0, 290.9 1180.8, 250.4 1183.0 C 207.9 1182.5, 187.0 1181.5, 145.4 1179.4 C 127.8 1177.0, 119.7 1177.2, 103.4 1174.4 C 120.8 1170.8, 131.3 1169.6, 148.7 1165.2 C 189.5 1164.7, 209.0 1164.7, 248.4 1164.7 C 289.3 1165.1, 309.9 1166.6, 350.4 1168.1 C 368.2 1170.5, 376.6 1171.4, 393.3 1173.3 Z" fill="#DDA0DD" fill-opacity="0.15" stroke="#9b709b" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 393.3 1173.3 C 375.6 1175.7, 367.3 1176.1, 351.3 1178.7 C 311.1 1181.0, 290.9 1180.8, 250.4 1183.0 C 207.9 1182.5, 187.0 1181.5, 145.4 1179.4 C 127.8 1177.0, 119.7 1177.2, 103.4 1174.4 C 120.8 1170.8, 131.3 1169.6, 148.7 1165.2 C 189.5 1164.7, 209.0 1164.7, 248.4 1164.7 C 289.3 1165.1, 309.9 1166.6, 350.4 1168.1 C 368.2 1170.5, 376.6 1171.4, 393.3 1173.3 Z" fill="none" stroke="#9b709b" stroke-width="0.75" stroke-linecap="round" opacity="0.3" transform="translate(-0.7, 0.5)"/>
+<path d="M 104.4 1130.7 Q 105.4 1151.0 103.7 1172.3" fill="none" stroke="#9b709b" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 104.9 1131.6 Q 103.5 1151.6 103.9 1173.2" fill="none" stroke="#9b709b" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 393.8 1131.6 Q 394.2 1151.4 394.5 1172.9" fill="none" stroke="#9b709b" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 394.2 1131.0 Q 393.0 1152.3 394.4 1173.0" fill="none" stroke="#9b709b" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 393.5 1129.6 C 377.0 1133.2, 368.0 1134.9, 351.8 1139.4 C 311.3 1139.4, 289.4 1138.2, 248.7 1138.0 C 206.4 1137.6, 187.4 1138.2, 145.0 1137.4 C 129.7 1135.4, 120.8 1133.1, 106.0 1130.9 C 123.2 1128.8, 130.6 1127.9, 148.0 1126.4 C 187.9 1124.4, 207.6 1122.9, 247.8 1121.0 C 290.4 1123.5, 310.7 1124.5, 353.1 1126.3 C 370.1 1127.7, 376.4 1128.1, 393.5 1129.6 Z" fill="#DDA0DD" fill-opacity="0.15" stroke="#9b709b" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 393.5 1129.6 C 377.0 1133.2, 368.0 1134.9, 351.8 1139.4 C 311.3 1139.4, 289.4 1138.2, 248.7 1138.0 C 206.4 1137.6, 187.4 1138.2, 145.0 1137.4 C 129.7 1135.4, 120.8 1133.1, 106.0 1130.9 C 123.2 1128.8, 130.6 1127.9, 148.0 1126.4 C 187.9 1124.4, 207.6 1122.9, 247.8 1121.0 C 290.4 1123.5, 310.7 1124.5, 353.1 1126.3 C 370.1 1127.7, 376.4 1128.1, 393.5 1129.6 Z" fill="none" stroke="#9b709b" stroke-width="0.75" stroke-linecap="round" opacity="0.3" transform="translate(0.3, -0.7)"/>
+<text x="249.33333333333334" y="1147.4" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="14" fill="#333333"><tspan x="249.33333333333334" dy="0">Diagram Store</tspan><tspan x="249.33333333333334" dy="18.2">(In-Memory)</tspan></text>
+</g>
+</g>
+</svg>

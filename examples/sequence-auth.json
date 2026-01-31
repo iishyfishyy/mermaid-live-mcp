@@ -1,0 +1,18 @@
+{
+  "type": "sequence",
+  "title": "User Authentication",
+  "participants": [
+    { "id": "client", "label": "Browser" },
+    { "id": "api", "label": "API Gateway" },
+    { "id": "auth", "label": "Auth Service" },
+    { "id": "db", "label": "PostgreSQL" }
+  ],
+  "messages": [
+    { "from": "client", "to": "api", "label": "POST /login {email, password}" },
+    { "from": "api", "to": "auth", "label": "authenticate(credentials)" },
+    { "from": "auth", "to": "db", "label": "SELECT * FROM users", "style": "dashed" },
+    { "from": "db", "to": "auth", "label": "User record", "style": "dashed" },
+    { "from": "auth", "to": "api", "label": "JWT token" },
+    { "from": "api", "to": "client", "label": "200 OK { token }" }
+  ]
+}

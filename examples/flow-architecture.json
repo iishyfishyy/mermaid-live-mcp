@@ -1,0 +1,22 @@
+{
+  "type": "flow",
+  "title": "System Architecture",
+  "nodes": [
+    { "id": "web", "label": "React Frontend", "shape": "rectangle" },
+    { "id": "api", "label": "Express API", "shape": "rectangle" },
+    { "id": "queue", "label": "Redis Queue", "shape": "cylinder" },
+    { "id": "worker", "label": "Background Worker", "shape": "rectangle" },
+    { "id": "db", "label": "PostgreSQL", "shape": "cylinder" },
+    { "id": "s3", "label": "S3 Storage", "shape": "cloud" }
+  ],
+  "edges": [
+    { "from": "web", "to": "api", "label": "REST API" },
+    { "from": "api", "to": "db", "label": "queries" },
+    { "from": "api", "to": "queue", "label": "enqueue jobs" },
+    { "from": "queue", "to": "worker", "label": "process" },
+    { "from": "worker", "to": "s3", "label": "upload files" }
+  ],
+  "groups": [
+    { "id": "backend", "label": "Backend Services", "contains": ["api", "queue", "worker"] }
+  ]
+}

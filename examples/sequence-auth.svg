@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 540" width="820" height="540">
+  <rect width="820" height="540" fill="white"/>
+  <text x="410" y="24" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="18" fill="#333333" font-weight="bold">User Authentication</text>
+  <g transform="translate(0, 40)">
+<path d="M 95.5 119.5 Q 93.0 290.1 94.8 459.4" fill="none" stroke="#999999" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="6,4"/>
+<path d="M 95.0 119.7 Q 96.9 290.0 94.5 460.4" fill="none" stroke="#999999" stroke-width="0.75" stroke-linecap="round" opacity="0.3" stroke-dasharray="6,4"/>
+<path d="M 284.5 119.5 Q 286.6 289.8 284.4 459.6" fill="none" stroke="#999999" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="6,4"/>
+<path d="M 285.0 120.4 Q 283.4 291.2 285.3 459.5" fill="none" stroke="#999999" stroke-width="0.75" stroke-linecap="round" opacity="0.3" stroke-dasharray="6,4"/>
+<path d="M 500.7 119.9 Q 500.2 288.5 499.9 459.9" fill="none" stroke="#999999" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="6,4"/>
+<path d="M 499.4 120.6 Q 498.9 288.0 500.5 460.3" fill="none" stroke="#999999" stroke-width="0.75" stroke-linecap="round" opacity="0.3" stroke-dasharray="6,4"/>
+<path d="M 710.2 119.7 Q 710.3 291.1 709.8 459.5" fill="none" stroke="#999999" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="6,4"/>
+<path d="M 709.8 119.5 Q 709.4 290.6 710.0 459.6" fill="none" stroke="#999999" stroke-width="0.75" stroke-linecap="round" opacity="0.3" stroke-dasharray="6,4"/>
+<g class="message">
+<path d="M 94.4 169.1 Q 189.8 169.3 286.0 170.1" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 94.9 170.2 Q 188.4 172.0 284.6 170.1" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<polygon points="284.9,170.3 277.5,174.7 276.9,164.4" fill="#666666" stroke="#666666" stroke-width="0.75" stroke-linejoin="round"/>
+<rect x="82.5" y="153.0" width="215.0" height="18.0" rx="3" ry="3" fill="white" fill-opacity="0.9" stroke="none"/>
+<text x="190" y="154.2" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="12" fill="#666666"><tspan x="190" dy="0">POST /login</tspan><tspan x="190" dy="15.600000000000001">{email, password}</tspan></text>
+</g>
+<g class="message">
+<path d="M 285.6 219.2 Q 391.2 221.2 499.1 219.3" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 284.7 220.0 Q 393.0 219.5 500.0 219.5" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<polygon points="500.2,220.5 492.5,225.1 492.1,214.2" fill="#666666" stroke="#666666" stroke-width="0.75" stroke-linejoin="round"/>
+<rect x="299.0" y="203.0" width="187.0" height="18.0" rx="3" ry="3" fill="white" fill-opacity="0.9" stroke="none"/>
+<text x="392.5" y="212" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="12" fill="#666666"><tspan x="392.5" dy="0">authenticate(credentials)</tspan></text>
+</g>
+<g class="message">
+<path d="M 500.8 269.9 Q 604.9 269.8 711.0 269.6" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="8,4"/>
+<path d="M 500.3 270.1 Q 606.2 271.5 710.4 270.0" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3" stroke-dasharray="8,4"/>
+<polygon points="710.1,270.2 701.2,275.0 701.2,264.5" fill="#666666" stroke="#666666" stroke-width="0.75" stroke-linejoin="round"/>
+<rect x="532.5" y="253.0" width="145.0" height="18.0" rx="3" ry="3" fill="white" fill-opacity="0.9" stroke="none"/>
+<text x="605" y="262" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="12" fill="#666666">SELECT * FROM users</text>
+</g>
+<g class="message">
+<path d="M 709.9 319.0 Q 603.3 320.0 500.4 319.8" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="8,4"/>
+<path d="M 709.6 319.9 Q 604.8 321.7 499.8 319.9" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3" stroke-dasharray="8,4"/>
+<polygon points="499.4,320.0 507.9,314.4 508.9,326.2" fill="#666666" stroke="#666666" stroke-width="0.75" stroke-linejoin="round"/>
+<rect x="560.5" y="303.0" width="89.0" height="18.0" rx="3" ry="3" fill="white" fill-opacity="0.9" stroke="none"/>
+<text x="605" y="312" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="12" fill="#666666">User record</text>
+</g>
+<g class="message">
+<path d="M 499.3 369.8 Q 393.8 370.1 284.3 370.6" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 500.1 369.8 Q 392.1 368.3 284.7 369.9" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<polygon points="285.6,369.6 293.1,364.9 292.9,374.9" fill="#666666" stroke="#666666" stroke-width="0.75" stroke-linejoin="round"/>
+<rect x="355.0" y="353.0" width="75.0" height="18.0" rx="3" ry="3" fill="white" fill-opacity="0.9" stroke="none"/>
+<text x="392.5" y="362" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="12" fill="#666666">JWT token</text>
+</g>
+<g class="message">
+<path d="M 285.6 419.3 Q 190.6 420.1 94.7 419.4" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 285.5 420.3 Q 189.2 418.7 95.1 420.0" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<polygon points="94.9,419.9 103.4,414.4 103.0,425.1" fill="#666666" stroke="#666666" stroke-width="0.75" stroke-linejoin="round"/>
+<rect x="128.0" y="403.0" width="124.0" height="18.0" rx="3" ry="3" fill="white" fill-opacity="0.9" stroke="none"/>
+<text x="190" y="412" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="12" fill="#666666">200 OK { token }</text>
+</g>
+<path d="M 39.3 79.4 L 148.4 80.9 L 149.6 118.0 L 39.4 120.1 Z" fill="#4ECDC4" fill-opacity="0.15" stroke="none"/>
+<path d="M 40.1 80.3 Q 92.6 81.6 149.0 80.4" fill="none" stroke="#379089" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 39.7 79.8 Q 93.9 79.0 149.0 80.7" fill="none" stroke="#379089" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 149.2 80.2 Q 149.5 100.2 150.0 119.0" fill="none" stroke="#379089" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 148.3 80.4 Q 150.9 98.0 149.7 117.7" fill="none" stroke="#379089" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 150.2 117.5 Q 94.5 117.7 38.8 119.8" fill="none" stroke="#379089" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 150.2 118.1 Q 95.5 118.8 39.3 120.3" fill="none" stroke="#379089" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 39.3 119.3 Q 41.1 99.7 39.8 78.7" fill="none" stroke="#379089" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 39.2 120.0 Q 39.6 100.2 39.0 79.8" fill="none" stroke="#379089" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<text x="95" y="100" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="13" fill="#333333">Browser</text>
+<path d="M 209.9 80.6 L 360.0 78.2 L 360.5 120.7 L 208.6 121.2 Z" fill="#FF6B6B" fill-opacity="0.15" stroke="none"/>
+<path d="M 209.8 81.1 Q 283.8 77.6 361.0 78.3" fill="none" stroke="#b34b4b" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 209.8 80.6 Q 283.2 80.0 359.9 78.1" fill="none" stroke="#b34b4b" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 360.9 78.3 Q 361.7 100.8 359.6 121.2" fill="none" stroke="#b34b4b" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 359.5 78.2 Q 359.3 99.9 360.7 121.2" fill="none" stroke="#b34b4b" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 361.4 120.6 Q 283.9 122.5 208.6 122.0" fill="none" stroke="#b34b4b" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 360.5 120.8 Q 282.7 119.1 208.5 121.3" fill="none" stroke="#b34b4b" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 208.9 120.5 Q 209.9 101.2 210.5 81.2" fill="none" stroke="#b34b4b" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 208.1 121.1 Q 211.2 100.6 210.5 81.2" fill="none" stroke="#b34b4b" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<text x="285" y="100" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="13" fill="#333333">API Gateway</text>
+<path d="M 419.6 79.3 L 582.0 81.2 L 579.5 119.2 L 418.3 121.7 Z" fill="#45B7D1" fill-opacity="0.15" stroke="none"/>
+<path d="M 420.1 80.0 Q 501.3 81.9 581.3 81.1" fill="none" stroke="#308092" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 419.3 79.2 Q 499.0 79.4 582.2 81.5" fill="none" stroke="#308092" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 582.5 81.4 Q 579.7 99.9 579.5 119.8" fill="none" stroke="#308092" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 581.6 81.4 Q 582.0 99.3 579.2 119.1" fill="none" stroke="#308092" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 578.7 119.4 Q 497.9 121.0 418.0 121.0" fill="none" stroke="#308092" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 579.4 119.7 Q 499.0 120.0 417.7 121.2" fill="none" stroke="#308092" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 419.0 121.8 Q 418.0 101.3 418.6 79.9" fill="none" stroke="#308092" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 417.9 121.6 Q 418.5 99.0 419.1 79.0" fill="none" stroke="#308092" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<text x="500" y="100" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="13" fill="#333333">Auth Service</text>
+<path d="M 640.7 78.8 L 778.2 80.8 L 781.0 118.4 L 641.5 120.2 Z" fill="#96CEB4" fill-opacity="0.15" stroke="none"/>
+<path d="M 641.7 78.4 Q 709.5 80.9 778.7 80.4" fill="none" stroke="#69907e" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 640.4 78.7 Q 709.6 80.5 778.3 80.9" fill="none" stroke="#69907e" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 777.9 80.8 Q 778.7 100.3 781.0 118.1" fill="none" stroke="#69907e" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 778.7 80.7 Q 780.5 100.7 781.0 118.2" fill="none" stroke="#69907e" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 781.5 119.3 Q 709.8 119.1 642.1 120.5" fill="none" stroke="#69907e" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 781.6 118.4 Q 711.3 117.3 641.1 120.5" fill="none" stroke="#69907e" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 640.8 119.5 Q 640.6 99.3 640.4 79.7" fill="none" stroke="#69907e" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 641.8 120.0 Q 642.1 100.3 640.7 78.9" fill="none" stroke="#69907e" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<text x="710" y="100" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="13" fill="#333333">PostgreSQL</text>
+<path d="M 40.6 458.9 L 151.0 460.6 L 148.8 498.7 L 41.3 499.4 Z" fill="#4ECDC4" fill-opacity="0.15" stroke="none"/>
+<path d="M 41.3 458.6 Q 97.2 461.5 150.6 460.2" fill="none" stroke="#379089" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 40.9 459.3 Q 96.0 460.9 150.8 460.1" fill="none" stroke="#379089" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 151.3 461.2 Q 148.7 479.0 149.0 499.3" fill="none" stroke="#379089" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 151.3 460.1 Q 148.9 480.2 148.6 498.5" fill="none" stroke="#379089" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 148.3 498.4 Q 96.5 499.4 42.2 499.9" fill="none" stroke="#379089" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 148.3 498.2 Q 94.6 499.0 40.9 499.8" fill="none" stroke="#379089" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 40.3 498.5 Q 41.9 478.4 40.0 458.4" fill="none" stroke="#379089" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 41.2 499.4 Q 41.4 480.8 40.9 458.4" fill="none" stroke="#379089" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<text x="95" y="480" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="13" fill="#333333">Browser</text>
+<path d="M 211.8 458.9 L 361.4 460.3 L 358.8 498.1 L 210.1 500.1 Z" fill="#FF6B6B" fill-opacity="0.15" stroke="none"/>
+<path d="M 212.6 459.7 Q 286.6 458.2 361.9 460.8" fill="none" stroke="#b34b4b" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 211.5 458.4 Q 286.7 458.8 362.0 459.9" fill="none" stroke="#b34b4b" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 361.6 460.9 Q 361.8 480.7 358.1 498.6" fill="none" stroke="#b34b4b" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 361.0 460.8 Q 359.2 481.0 358.3 498.7" fill="none" stroke="#b34b4b" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 359.3 499.1 Q 286.0 500.3 209.6 499.9" fill="none" stroke="#b34b4b" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 358.8 498.6 Q 283.2 497.7 210.4 499.6" fill="none" stroke="#b34b4b" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 209.6 499.8 Q 209.8 481.0 212.4 458.6" fill="none" stroke="#b34b4b" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 209.7 499.9 Q 209.9 479.5 212.4 458.9" fill="none" stroke="#b34b4b" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<text x="285" y="480" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="13" fill="#333333">API Gateway</text>
+<path d="M 418.9 460.5 L 581.1 460.1 L 580.7 499.2 L 420.5 499.6 Z" fill="#45B7D1" fill-opacity="0.15" stroke="none"/>
+<path d="M 418.8 461.1 Q 501.6 460.7 581.0 461.0" fill="none" stroke="#308092" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 418.3 460.9 Q 499.0 461.2 580.8 460.5" fill="none" stroke="#308092" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 580.9 460.6 Q 580.3 478.0 581.6 498.9" fill="none" stroke="#308092" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 581.2 460.5 Q 582.4 478.7 580.6 499.5" fill="none" stroke="#308092" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 581.0 499.9 Q 501.0 497.6 421.0 499.1" fill="none" stroke="#308092" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 580.9 499.2 Q 501.1 498.2 420.5 499.9" fill="none" stroke="#308092" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 419.7 500.1 Q 421.5 478.9 419.4 460.4" fill="none" stroke="#308092" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 420.9 499.9 Q 419.1 480.0 419.4 460.2" fill="none" stroke="#308092" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<text x="500" y="480" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="13" fill="#333333">Auth Service</text>
+<path d="M 640.5 461.4 L 778.5 459.6 L 779.4 499.1 L 639.7 498.8 Z" fill="#96CEB4" fill-opacity="0.15" stroke="none"/>
+<path d="M 641.2 460.6 Q 710.1 458.9 778.5 460.0" fill="none" stroke="#69907e" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 640.4 460.9 Q 710.9 459.2 778.8 459.1" fill="none" stroke="#69907e" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 778.0 460.3 Q 777.3 478.4 778.5 498.3" fill="none" stroke="#69907e" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 778.9 459.5 Q 778.6 478.6 779.5 498.7" fill="none" stroke="#69907e" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 780.1 499.8 Q 708.3 500.6 639.7 499.1" fill="none" stroke="#69907e" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 779.0 499.1 Q 709.3 499.9 640.0 498.9" fill="none" stroke="#69907e" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 640.1 497.9 Q 639.2 479.7 640.5 462.1" fill="none" stroke="#69907e" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 640.2 499.1 Q 640.9 480.2 640.4 461.0" fill="none" stroke="#69907e" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<text x="710" y="480" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="13" fill="#333333">PostgreSQL</text>
+</g>
+</svg>

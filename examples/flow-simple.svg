@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1274 314" width="1274" height="314">
+  <rect width="1274" height="314" fill="white"/>
+  <text x="637" y="24" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="18" fill="#333333" font-weight="bold">CI/CD Pipeline</text>
+  <g transform="translate(0, 40)">
+<g class="edge" data-from="commit" data-to="build">
+<path d="M 192.5 91.5 Q 270.0 92.1 351.8 91.4" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 192.0 91.7 Q 273.9 92.0 351.5 92.4" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<polygon points="351.6,91.8 344.4,97.3 343.0,86.1" fill="#666666" stroke="#666666" stroke-width="0.75" stroke-linejoin="round"/>
+<rect x="241.5" y="80.0" width="61.0" height="20.0" rx="3" ry="3" fill="white" fill-opacity="0.9" stroke="none"/>
+<text x="272" y="90" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="12" fill="#666666">trigger</text>
+</g>
+<g class="edge" data-from="build" data-to="test">
+<path d="M 472.1 92.7 Q 510.4 93.2 552.5 91.2" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 472.4 92.0 Q 512.2 90.5 552.0 91.9" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<polygon points="552.5,92.3 543.0,96.4 542.6,87.6" fill="#666666" stroke="#666666" stroke-width="0.75" stroke-linejoin="round"/>
+</g>
+<g class="edge" data-from="test" data-to="check">
+<path d="M 682.2 91.7 Q 722.3 93.1 761.8 91.5" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 681.8 91.5 Q 721.4 92.6 762.0 91.6" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<polygon points="762.6,92.1 753.5,97.0 752.9,85.8" fill="#666666" stroke="#666666" stroke-width="0.75" stroke-linejoin="round"/>
+</g>
+<g class="edge" data-from="check" data-to="deploy">
+<path d="M 911.9 82.4 Q 990.4 84.0 1071.4 82.1" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 912.2 81.9 Q 994.0 80.8 1071.9 82.3" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<polygon points="1071.4,81.6 1062.9,88.0 1064.2,75.8" fill="#666666" stroke="#666666" stroke-width="0.75" stroke-linejoin="round"/>
+<rect x="975.5" y="70.0" width="33.0" height="20.0" rx="3" ry="3" fill="white" fill-opacity="0.9" stroke="none"/>
+<text x="992" y="80" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="12" fill="#666666">yes</text>
+</g>
+<g class="edge" data-from="check" data-to="fail">
+<path d="M 911.5 102.0 Q 917.5 101.5 922.0 101.2" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="8,4"/>
+<path d="M 912.3 101.7 Q 918.9 101.4 922.2 102.5" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3" stroke-dasharray="8,4"/>
+<path d="M 922.8 101.9 Q 921.9 146.8 923.0 191.6" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="8,4"/>
+<path d="M 922.3 102.1 Q 923.2 148.5 922.4 192.0" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3" stroke-dasharray="8,4"/>
+<path d="M 921.6 191.9 Q 996.2 191.4 1072.1 192.3" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="8,4"/>
+<path d="M 921.9 191.4 Q 995.3 192.0 1072.2 191.9" fill="none" stroke="#666666" stroke-width="0.75" stroke-linecap="round" opacity="0.3" stroke-dasharray="8,4"/>
+<polygon points="1071.8,191.9 1063.5,198.2 1062.8,186.5" fill="#666666" stroke="#666666" stroke-width="0.75" stroke-linejoin="round"/>
+<rect x="907.0" y="135.0" width="30.0" height="20.0" rx="3" ry="3" fill="white" fill-opacity="0.9" stroke="none"/>
+<text x="922" y="145" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="12" fill="#666666">no</text>
+</g>
+<g class="node" data-id="commit">
+<path d="M 191.0 91.5 C 183.0 100.6, 180.2 105.3, 172.3 115.0 C 150.8 117.3, 140.0 119.7, 120.1 121.9 C 101.9 118.5, 91.7 117.5, 73.8 113.3 C 64.2 104.1, 60.2 101.0, 50.5 91.6 C 59.6 84.2, 62.6 79.8, 71.0 72.0 C 91.2 67.1, 101.8 65.2, 121.6 60.3 C 141.5 64.1, 152.1 66.5, 171.9 70.1 C 178.7 79.1, 183.5 83.9, 191.0 91.5 Z" fill="#4ECDC4" fill-opacity="0.15" stroke="#379089" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 191.0 91.5 C 183.0 100.6, 180.2 105.3, 172.3 115.0 C 150.8 117.3, 140.0 119.7, 120.1 121.9 C 101.9 118.5, 91.7 117.5, 73.8 113.3 C 64.2 104.1, 60.2 101.0, 50.5 91.6 C 59.6 84.2, 62.6 79.8, 71.0 72.0 C 91.2 67.1, 101.8 65.2, 121.6 60.3 C 141.5 64.1, 152.1 66.5, 171.9 70.1 C 178.7 79.1, 183.5 83.9, 191.0 91.5 Z" fill="none" stroke="#379089" stroke-width="0.75" stroke-linecap="round" opacity="0.3" transform="translate(-0.2, 0.1)"/>
+<text x="122" y="92" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="14" fill="#333333">Git Commit</text>
+</g>
+<g class="node" data-id="build">
+<path d="M 350.8 63.5 L 473.7 63.9 L 473.2 120.9 L 352.0 120.8 Z" fill="#FF6B6B" fill-opacity="0.15" stroke="none"/>
+<path d="M 351.7 63.2 Q 413.7 64.9 473.9 64.2" fill="none" stroke="#b34b4b" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 351.0 64.1 Q 413.8 62.2 474.2 63.4" fill="none" stroke="#b34b4b" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 473.7 63.2 Q 472.9 90.6 473.2 120.2" fill="none" stroke="#b34b4b" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 473.3 63.7 Q 474.6 91.4 473.5 120.8" fill="none" stroke="#b34b4b" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 473.1 121.2 Q 414.4 121.2 352.9 120.8" fill="none" stroke="#b34b4b" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 473.5 120.5 Q 412.4 119.2 352.1 120.9" fill="none" stroke="#b34b4b" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 351.5 121.4 Q 350.8 91.7 350.7 63.8" fill="none" stroke="#b34b4b" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 352.2 121.0 Q 351.4 90.4 350.3 63.8" fill="none" stroke="#b34b4b" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<text x="412" y="92" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="14" fill="#333333">Build</text>
+</g>
+<g class="node" data-id="test">
+<path d="M 550.9 60.2 L 681.8 63.0 L 683.9 122.1 L 550.2 122.6 Z" fill="#45B7D1" fill-opacity="0.15" stroke="none"/>
+<path d="M 550.6 60.0 Q 615.9 61.6 682.5 63.6" fill="none" stroke="#308092" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 550.3 60.5 Q 618.0 61.8 681.6 63.1" fill="none" stroke="#308092" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 682.1 63.7 Q 680.9 92.4 683.5 122.9" fill="none" stroke="#308092" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 681.8 63.4 Q 684.7 92.4 683.3 121.6" fill="none" stroke="#308092" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 683.7 122.2 Q 616.9 122.6 550.5 122.8" fill="none" stroke="#308092" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 684.2 122.5 Q 617.5 120.9 550.7 122.5" fill="none" stroke="#308092" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 551.1 123.5 Q 548.9 91.2 550.7 59.9" fill="none" stroke="#308092" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 550.0 122.4 Q 552.5 92.6 550.3 60.7" fill="none" stroke="#308092" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<text x="617" y="92" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="14" fill="#333333">Run Tests</text>
+</g>
+<g class="node" data-id="check">
+<path d="M 837.5 63.7 L 913.0 93.4 L 835.6 121.9 L 760.2 91.2 Z" fill="#96CEB4" fill-opacity="0.15" stroke="none"/>
+<path d="M 838.0 64.1 Q 874.2 78.3 912.5 93.3" fill="none" stroke="#69907e" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 837.5 64.1 Q 876.4 79.0 913.3 93.1" fill="none" stroke="#69907e" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 912.4 93.2 Q 873.1 108.3 835.1 122.1" fill="none" stroke="#69907e" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 912.8 93.0 Q 872.8 108.1 835.6 121.8" fill="none" stroke="#69907e" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 834.6 121.1 Q 797.5 108.3 759.8 91.6" fill="none" stroke="#69907e" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 835.0 122.3 Q 799.3 106.6 760.1 90.7" fill="none" stroke="#69907e" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 759.3 90.7 Q 797.5 77.0 837.9 63.1" fill="none" stroke="#69907e" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 760.5 90.7 Q 797.1 78.2 838.0 63.7" fill="none" stroke="#69907e" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<text x="837" y="92" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="14" fill="#333333">Tests Pass?</text>
+</g>
+<g class="node" data-id="deploy">
+<path d="M 1102.0 53.1 L 1164.0 51.2 L 1192.9 81.1 L 1162.1 112.7 L 1100.9 111.6 L 1072.3 82.4 Z" fill="#FFEAA7" fill-opacity="0.15" stroke="none"/>
+<path d="M 1101.7 53.0 Q 1132.1 52.8 1164.0 50.8" fill="none" stroke="#b3a475" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 1102.5 53.0 Q 1133.9 53.2 1163.9 50.9" fill="none" stroke="#b3a475" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 1164.5 52.1 Q 1177.0 65.9 1193.6 81.4" fill="none" stroke="#b3a475" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 1164.5 51.2 Q 1178.5 64.2 1192.6 81.4" fill="none" stroke="#b3a475" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 1192.2 80.4 Q 1177.0 96.7 1161.8 113.5" fill="none" stroke="#b3a475" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 1193.2 81.0 Q 1178.5 97.7 1162.1 112.7" fill="none" stroke="#b3a475" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 1162.6 113.0 Q 1132.1 111.0 1100.2 111.0" fill="none" stroke="#b3a475" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 1162.5 113.2 Q 1132.8 111.6 1101.3 111.4" fill="none" stroke="#b3a475" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 1101.0 112.2 Q 1085.9 96.1 1073.0 83.1" fill="none" stroke="#b3a475" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 1100.5 111.4 Q 1086.1 95.3 1072.6 82.8" fill="none" stroke="#b3a475" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 1071.9 82.6 Q 1087.7 68.8 1102.7 52.1" fill="none" stroke="#b3a475" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 1072.8 82.5 Q 1086.8 67.2 1101.7 52.9" fill="none" stroke="#b3a475" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<text x="1132" y="82" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="14" fill="#333333">Deploy</text>
+</g>
+<g class="node" data-id="fail">
+<path d="M 1088.9 162.9 L 1221.6 161.9 L 1205.5 220.3 L 1070.8 223.4 Z" fill="#DDA0DD" fill-opacity="0.15" stroke="none"/>
+<path d="M 1087.9 162.0 Q 1156.2 161.7 1221.0 161.4" fill="none" stroke="#9b709b" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 1088.8 162.9 Q 1155.7 164.1 1221.9 161.4" fill="none" stroke="#9b709b" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 1222.3 162.0 Q 1215.4 190.0 1204.9 219.3" fill="none" stroke="#9b709b" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 1221.6 161.5 Q 1213.7 191.2 1206.0 220.8" fill="none" stroke="#9b709b" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 1205.5 219.8 Q 1139.2 223.0 1070.2 222.5" fill="none" stroke="#9b709b" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 1206.0 220.7 Q 1140.1 220.6 1070.9 223.7" fill="none" stroke="#9b709b" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<path d="M 1070.3 224.2 Q 1078.4 194.0 1088.2 163.9" fill="none" stroke="#9b709b" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 1071.3 223.7 Q 1078.1 194.9 1089.2 163.5" fill="none" stroke="#9b709b" stroke-width="0.75" stroke-linecap="round" opacity="0.3"/>
+<text x="1147" y="192" text-anchor="middle" dominant-baseline="central" font-family='"Segoe Print", "Comic Sans MS", cursive' font-size="14" fill="#333333">Notify Team</text>
+</g>
+</g>
+</svg>

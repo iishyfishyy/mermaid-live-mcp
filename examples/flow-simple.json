@@ -1,0 +1,20 @@
+{
+  "type": "flow",
+  "title": "CI/CD Pipeline",
+  "direction": "LR",
+  "nodes": [
+    { "id": "commit", "label": "Git Commit", "shape": "ellipse" },
+    { "id": "build", "label": "Build", "shape": "rectangle" },
+    { "id": "test", "label": "Run Tests", "shape": "rectangle" },
+    { "id": "check", "label": "Tests Pass?", "shape": "diamond" },
+    { "id": "deploy", "label": "Deploy", "shape": "hexagon" },
+    { "id": "fail", "label": "Notify Team", "shape": "parallelogram" }
+  ],
+  "edges": [
+    { "from": "commit", "to": "build", "label": "trigger" },
+    { "from": "build", "to": "test" },
+    { "from": "test", "to": "check" },
+    { "from": "check", "to": "deploy", "label": "yes" },
+    { "from": "check", "to": "fail", "label": "no", "style": "dashed" }
+  ]
+}

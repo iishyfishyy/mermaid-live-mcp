@@ -1,0 +1,22 @@
+{
+  "name": "@sketchdraw/mcp-server",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": {
+    "sketchdraw-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "@sketchdraw/core": "workspace:*",
+    "@sketchdraw/preview": "workspace:*",
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "@types/node": "^22.0.0"
+  }
+}

@@ -5,20 +5,16 @@ import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js"
 import { z } from "zod";
 import { writeFileSync, mkdirSync } from "node:fs";
 import { dirname, resolve } from "node:path";
-import {
-  generateDiagram,
-  DiagramSchema,
-  svgToPng,
-} from "@sketchdraw/core";
 import { PreviewServer } from "@sketchdraw/preview";
 
 // ── In-memory diagram store ──
 interface StoredDiagram {
   id: string;
-  input: unknown;
+  syntax: string;
   svg: string;
   createdAt: Date;
   filePath?: string;
+  previewUrl?: string;
 }
 
 const diagrams = new Map<string, StoredDiagram>();
@@ -28,27 +24,41 @@ function generateId(): string {
   return `diagram_${nextId++}`;
 }
 
-// ── Live preview ──
-let previewServer: PreviewServer | null = null;
-let previewUrl: string | null = null;
-let browserOpened = false;
+// ── Live preview (per-diagram servers) ──
+const previewServers = new Map<string, { server: PreviewServer; url: string }>();
 
-async function pushToPreview(svg: string): Promise<string | null> {
-  if (!previewServer) {
-    previewServer = new PreviewServer();
-    try {
-      previewUrl = await previewServer.start();
-    } catch {
-      previewServer = null;
-      return null;
-    }
+async function ensurePreviewForDiagram(
+  id: string
+): Promise<{ server: PreviewServer; url: string } | null> {
+  const existing = previewServers.get(id);
+  if (existing) return existing;
+
+  const preview = new PreviewServer();
+  preview.onSvgRendered = (diagId: string, svg: string) => {
+    const stored = diagrams.get(diagId);
+    if (stored) stored.svg = svg;
+  };
+
+  try {
+    const url = await preview.start();
+    const entry = { server: preview, url };
+    previewServers.set(id, entry);
+    preview.openBrowser();
+    return entry;
+  } catch {
+    return null;
   }
-  previewServer.updateDiagram(svg);
-  if (!browserOpened) {
-    previewServer.openBrowser();
-    browserOpened = true;
-  }
-  return previewUrl;
+}
+
+async function pushMermaidToPreview(
+  id: string,
+  syntax: string,
+  title?: string
+): Promise<string | null> {
+  const entry = await ensurePreviewForDiagram(id);
+  if (!entry) return null;
+  entry.server.updateMermaid(id, syntax, title);
+  return entry.url;
 }
 
 // ── MCP Server ──
@@ -57,205 +67,87 @@ const server = new McpServer({
   version: "0.1.0",
 });
 
-// ── Tool: generate_diagram ──
+// ── Tool: generate_mermaid ──
 server.tool(
-  "generate_diagram",
-  "Generate a hand-drawn style diagram from a semantic description. Supports flow diagrams (nodes, edges, groups) and sequence diagrams (participants, messages). Returns SVG and optionally saves to file.",
+  "generate_mermaid",
+  "Generate a diagram from Mermaid.js syntax. Renders in live preview browser with SVG/PNG download options. Supports flowcharts, sequence diagrams, class diagrams, state diagrams, ER diagrams, Gantt charts, and more.",
   {
-    diagram: z
-      .object({
-        type: z.enum(["flow", "sequence"]),
-        title: z.string().optional(),
-        // Flow diagram fields
-        nodes: z
-          .array(
-            z.object({
-              id: z.string(),
-              label: z.string(),
-              shape: z
-                .enum([
-                  "rectangle",
-                  "ellipse",
-                  "diamond",
-                  "cylinder",
-                  "cloud",
-                  "hexagon",
-                  "parallelogram",
-                ])
-                .default("rectangle"),
-              color: z.string().optional(),
-              textColor: z.string().optional(),
-            })
-          )
-          .optional(),
-        edges: z
-          .array(
-            z.object({
-              from: z.string(),
-              to: z.string(),
-              label: z.string().optional(),
-              style: z.enum(["solid", "dashed", "dotted"]).default("solid"),
-              direction: z
-                .enum(["forward", "backward", "both", "none"])
-                .default("forward"),
-              color: z.string().optional(),
-            })
-          )
-          .optional(),
-        groups: z
-          .array(
-            z.object({
-              id: z.string(),
-              label: z.string().optional(),
-              contains: z.array(z.string()),
-              color: z.string().optional(),
-            })
-          )
-          .optional(),
-        // Sequence diagram fields
-        participants: z
-          .array(
-            z.object({
-              id: z.string(),
-              label: z.string(),
-              color: z.string().optional(),
-            })
-          )
-          .optional(),
-        messages: z
-          .array(
-            z.object({
-              from: z.string(),
-              to: z.string(),
-              label: z.string(),
-              style: z.enum(["solid", "dashed", "dotted"]).default("solid"),
-              color: z.string().optional(),
-            })
-          )
-          .optional(),
-        // Common fields
-        style: z
-          .enum(["hand-drawn", "clean", "minimal"])
-          .default("hand-drawn"),
-        direction: z.enum(["TB", "LR", "BT", "RL"]).default("TB"),
-      })
-      .describe("The diagram definition"),
-    output_path: z
+    syntax: z
+      .string()
+      .describe("Mermaid diagram syntax (e.g. 'graph TD; A-->B;')"),
+    title: z
       .string()
       .optional()
-      .describe(
-        "File path to save the SVG output. If not specified, SVG is returned in the response only."
-      ),
+      .describe("Optional title for the browser preview tab"),
   },
-  async ({ diagram, output_path }) => {
-    try {
-      const result = await generateDiagram(diagram);
-      const id = generateId();
+  async ({ syntax, title }) => {
+    const id = generateId();
+    diagrams.set(id, {
+      id,
+      syntax,
+      svg: "",
+      createdAt: new Date(),
+    });
 
-      let filePath: string | undefined;
-      if (output_path) {
-        filePath = resolve(output_path);
-        mkdirSync(dirname(filePath), { recursive: true });
-        writeFileSync(filePath, result.svg, "utf-8");
-      }
+    const preview = await pushMermaidToPreview(id, syntax, title);
+    const storedDiagram = diagrams.get(id);
+    if (storedDiagram && preview) storedDiagram.previewUrl = preview;
 
-      diagrams.set(id, {
-        id,
-        input: diagram,
-        svg: result.svg,
-        createdAt: new Date(),
-        filePath,
-      });
-
-      const preview = await pushToPreview(result.svg);
-
-      const responseLines = [
-        `Diagram generated successfully.`,
-        `ID: ${id}`,
-      ];
-      if (filePath) {
-        responseLines.push(`Saved to: ${filePath}`);
-      }
-      if (preview) {
-        responseLines.push(`Preview: ${preview}`);
-      }
+    const responseLines = [`Mermaid diagram sent to preview.`, `ID: ${id}`];
+    if (preview) {
+      responseLines.push(`Preview: ${preview}`);
       responseLines.push(
-        `SVG size: ${result.svg.length} bytes`,
-        ``,
-        `SVG content:`,
-        result.svg
+        `Use the download buttons in the browser to export as SVG or PNG.`
       );
-
-      return {
-        content: [{ type: "text" as const, text: responseLines.join("\n") }],
-      };
-    } catch (err) {
-      return {
-        content: [
-          {
-            type: "text" as const,
-            text: `Error generating diagram: ${err instanceof Error ? err.message : String(err)}`,
-          },
-        ],
-        isError: true,
-      };
     }
+
+    return {
+      content: [{ type: "text" as const, text: responseLines.join("\n") }],
+    };
   }
 );
 
-// ── Tool: export_diagram ──
+// ── Tool: update_diagram ──
 server.tool(
-  "export_diagram",
-  "Export a previously generated diagram to SVG or PNG format.",
+  "update_diagram",
+  "Replace a diagram's Mermaid syntax and re-render it in the preview.",
   {
-    diagram_id: z.string().describe("The ID of the diagram to export"),
-    format: z.enum(["svg", "png"]).default("svg").describe("Export format"),
-    path: z.string().describe("File path to save the exported diagram"),
+    diagram_id: z.string().describe("The ID of the diagram to update"),
+    syntax: z
+      .string()
+      .describe("New Mermaid diagram syntax to replace the existing one"),
+    title: z
+      .string()
+      .optional()
+      .describe("Optional title for the browser preview tab"),
   },
-  async ({ diagram_id, format, path: outputPath }) => {
-    try {
-      const stored = diagrams.get(diagram_id);
-      if (!stored) {
-        return {
-          content: [
-            {
-              type: "text" as const,
-              text: `Diagram not found: ${diagram_id}. Use list_diagrams to see available diagrams.`,
-            },
-          ],
-          isError: true,
-        };
-      }
-
-      const outPath = resolve(outputPath);
-      mkdirSync(dirname(outPath), { recursive: true });
-
-      if (format === "png") {
-        const png = svgToPng(stored.svg);
-        writeFileSync(outPath, png);
-      } else {
-        writeFileSync(outPath, stored.svg, "utf-8");
-      }
-
+  async ({ diagram_id, syntax, title }) => {
+    const stored = diagrams.get(diagram_id);
+    if (!stored) {
       return {
         content: [
           {
             type: "text" as const,
-            text: `Exported ${format.toUpperCase()} to: ${outPath}`,
-          },
-        ],
-      };
-    } catch (err) {
-      return {
-        content: [
-          {
-            type: "text" as const,
-            text: `Error exporting diagram: ${err instanceof Error ? err.message : String(err)}`,
+            text: `Diagram not found: ${diagram_id}. Use list_diagrams to see available diagrams.`,
           },
         ],
         isError: true,
       };
     }
+
+    stored.syntax = syntax;
+    stored.svg = "";
+
+    const preview = await pushMermaidToPreview(diagram_id, syntax, title);
+
+    const responseLines = [`Diagram ${diagram_id} updated successfully.`];
+    if (preview) {
+      responseLines.push(`Preview: ${preview}`);
+    }
+
+    return {
+      content: [{ type: "text" as const, text: responseLines.join("\n") }],
+    };
   }
 );
 
@@ -274,7 +166,16 @@ server.tool(
     }
 
     const lines = Array.from(diagrams.values()).map((d) => {
-      const parts = [`ID: ${d.id}`, `Created: ${d.createdAt.toISOString()}`];
+      const firstLine = d.syntax.split("\n")[0].trim();
+      const parts = [
+        `ID: ${d.id}`,
+        `Created: ${d.createdAt.toISOString()}`,
+        `SVG available: ${d.svg ? "yes" : "no"}`,
+        `Syntax: ${firstLine}`,
+      ];
+      if (d.previewUrl) {
+        parts.push(`Preview: ${d.previewUrl}`);
+      }
       if (d.filePath) {
         parts.push(`File: ${d.filePath}`);
       }
@@ -287,85 +188,53 @@ server.tool(
   }
 );
 
-// ── Tool: update_diagram ──
+// ── Tool: export_diagram ──
 server.tool(
-  "update_diagram",
-  "Update a previously generated diagram with changes and re-render it.",
+  "export_diagram",
+  "Write a diagram's SVG to disk. PNG export is available via the browser download buttons.",
   {
-    diagram_id: z.string().describe("The ID of the diagram to update"),
-    changes: z
-      .record(z.unknown())
-      .describe(
-        "Partial diagram changes to merge with the existing diagram definition"
-      ),
-    output_path: z
-      .string()
-      .optional()
-      .describe("File path to save the updated SVG"),
+    diagram_id: z.string().describe("The ID of the diagram to export"),
+    path: z.string().describe("File path to save the SVG file"),
   },
-  async ({ diagram_id, changes, output_path }) => {
-    try {
-      const stored = diagrams.get(diagram_id);
-      if (!stored) {
-        return {
-          content: [
-            {
-              type: "text" as const,
-              text: `Diagram not found: ${diagram_id}`,
-            },
-          ],
-          isError: true,
-        };
-      }
-
-      // Merge changes into the existing input
-      const updatedInput = {
-        ...(stored.input as Record<string, unknown>),
-        ...changes,
-      };
-
-      const result = await generateDiagram(updatedInput);
-
-      let filePath: string | undefined;
-      if (output_path) {
-        filePath = resolve(output_path);
-        mkdirSync(dirname(filePath), { recursive: true });
-        writeFileSync(filePath, result.svg, "utf-8");
-      } else if (stored.filePath) {
-        filePath = stored.filePath;
-        writeFileSync(filePath, result.svg, "utf-8");
-      }
-
-      stored.input = updatedInput;
-      stored.svg = result.svg;
-      if (filePath) {
-        stored.filePath = filePath;
-      }
-
-      const preview = await pushToPreview(result.svg);
-
-      const responseLines = [`Diagram ${diagram_id} updated successfully.`];
-      if (filePath) {
-        responseLines.push(`Saved to: ${filePath}`);
-      }
-      if (preview) {
-        responseLines.push(`Preview: ${preview}`);
-      }
-
-      return {
-        content: [{ type: "text" as const, text: responseLines.join("\n") }],
-      };
-    } catch (err) {
+  async ({ diagram_id, path: outputPath }) => {
+    const stored = diagrams.get(diagram_id);
+    if (!stored) {
       return {
         content: [
           {
             type: "text" as const,
-            text: `Error updating diagram: ${err instanceof Error ? err.message : String(err)}`,
+            text: `Diagram not found: ${diagram_id}. Use list_diagrams to see available diagrams.`,
           },
         ],
         isError: true,
       };
     }
+
+    if (!stored.svg) {
+      return {
+        content: [
+          {
+            type: "text" as const,
+            text: `SVG not yet available for ${diagram_id}. The browser may still be rendering — try again in a moment.`,
+          },
+        ],
+        isError: true,
+      };
+    }
+
+    const outPath = resolve(outputPath);
+    mkdirSync(dirname(outPath), { recursive: true });
+    writeFileSync(outPath, stored.svg, "utf-8");
+    stored.filePath = outPath;
+
+    return {
+      content: [
+        {
+          type: "text" as const,
+          text: `Exported SVG to: ${outPath}`,
+        },
+      ],
+    };
   }
 );
 
@@ -378,4 +247,22 @@ async function main() {
 main().catch((err) => {
   console.error("Failed to start MCP server:", err);
   process.exit(1);
+});
+
+// ── Graceful shutdown ──
+async function shutdownAllPreviews(): Promise<void> {
+  const stops = Array.from(previewServers.values()).map(({ server }) =>
+    server.stop()
+  );
+  await Promise.allSettled(stops);
+  previewServers.clear();
+}
+
+process.on("SIGINT", async () => {
+  await shutdownAllPreviews();
+  process.exit(0);
+});
+process.on("SIGTERM", async () => {
+  await shutdownAllPreviews();
+  process.exit(0);
 });

@@ -53,10 +53,15 @@
   }
 
   .hero-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .hero-content {
+    max-width: 680px;
   }
 
   .hero-title {
@@ -78,12 +83,20 @@
     font-size: 1.15rem;
     line-height: 1.7;
     margin-bottom: 2rem;
-    max-width: 480px;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero-actions {
     display: flex;
+    justify-content: center;
     gap: 1rem;
+  }
+
+  .hero-visual {
+    width: 100%;
+    max-width: 560px;
   }
 
   .hero-diagram {
@@ -99,16 +112,13 @@
   }
 
   @media (max-width: 768px) {
-    .hero-inner {
-      grid-template-columns: 1fr;
-    }
-
     .hero-title {
       font-size: 2rem;
     }
 
     .hero-actions {
       flex-wrap: wrap;
+      justify-content: center;
     }
   }
 </style>

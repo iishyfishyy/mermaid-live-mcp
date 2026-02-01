@@ -5,15 +5,14 @@ const base = import.meta.env.BASE_URL;
 <nav class="nav">
   <div class="container nav-inner">
     <a href={base} class="nav-logo">
-      <img src={`${base}favicon.svg`} alt="" width="28" height="28" />
-      <span>SketchDraw</span>
+      <span>mermaid-live-mcp</span>
     </a>
     <div class="nav-links">
+      <a href="#install">Install</a>
       <a href="#features">Features</a>
       <a href="#playground">Playground</a>
-      <a href="#install">Install</a>
       <a
-        href="https://github.com/iishyfishyy/mermaid-mcp-live"
+        href="https://github.com/iishyfishyy/mermaid-live-mcp"
         target="_blank"
         rel="noopener noreferrer"
         class="btn btn-outline btn-sm"
@@ -47,7 +46,8 @@ const base = import.meta.env.BASE_URL;
     display: flex;
     align-items: center;
     gap: 0.6rem;
-    font-weight: 700;
+    font-family: var(--font-mono);
+    font-weight: 500;
     font-size: 1.1rem;
     color: var(--color-text);
   }

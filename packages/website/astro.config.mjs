@@ -3,7 +3,7 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://iishyfishyy.github.io',
-  base: '/mermaid-mcp-live',
+  base: '/mermaid-live-mcp',
   output: 'static',
   integrations: [sitemap()],
 });

@@ -1,21 +1,53 @@
 {
-  "name": "@sketchdraw/mcp-server",
+  "name": "mermaid-live-mcp",
   "version": "0.1.0",
+  "description": "MCP server for generating Mermaid diagrams with live browser preview",
   "type": "module",
   "bin": {
-    "sketchdraw-mcp": "dist/index.js"
+    "mermaid-live-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch"
+    "build": "tsup",
+    "dev": "tsc --watch",
+    "prepublishOnly": "pnpm run build"
+  },
+  "keywords": [
+    "mcp",
+    "mermaid",
+    "diagram",
+    "model-context-protocol",
+    "claude",
+    "cursor",
+    "live-preview"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicholasgriffintn/sketchdraw.git",
+    "directory": "packages/mcp-server"
+  },
+  "homepage": "https://github.com/nicholasgriffintn/sketchdraw/tree/main/packages/mcp-server#readme",
+  "bugs": {
+    "url": "https://github.com/nicholasgriffintn/sketchdraw/issues"
   },
   "dependencies": {
-    "@sketchdraw/preview": "workspace:*",
     "@modelcontextprotocol/sdk": "^1.12.0",
+    "ws": "^8.18.0",
     "zod": "^3.24.0"
   },
   "devDependencies": {
-    "typescript": "^5.7.0",
-    "@types/node": "^22.0.0"
+    "@sketchdraw/preview": "workspace:*",
+    "@types/node": "^22.0.0",
+    "tsup": "^8.5.1",
+    "typescript": "^5.7.0"
   }
 }

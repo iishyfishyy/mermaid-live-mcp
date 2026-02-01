@@ -61,7 +61,7 @@ async function pushMermaidToPreview(
 
 // ── MCP Server ──
 const server = new McpServer({
-  name: "sketchdraw",
+  name: "mermaid-live-mcp",
   version: "0.1.0",
 });
 

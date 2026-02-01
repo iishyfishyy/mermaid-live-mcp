@@ -2,11 +2,13 @@
 
 MCP server for generating [Mermaid](https://mermaid.js.org/) diagrams with live browser preview. Renders diagrams in real-time and supports SVG/PNG export.
 
-## Quick start
+<a href="https://npmjs.com/package/mermaid-live-mcp"><img src="https://img.shields.io/npm/v/mermaid-live-mcp" alt="npm version"></a>
+
+## Install
 
 ### Claude Desktop
 
-Add to `~/.claude/claude_desktop_config.json`:
+Add to your [Claude Desktop config](https://modelcontextprotocol.io/quickstart/user) (`~/Library/Application Support/Claude/claude_desktop_config.json` on macOS):
 
 ```json
 {
@@ -21,7 +23,7 @@ Add to `~/.claude/claude_desktop_config.json`:
 
 ### Cursor
 
-Add to `.cursor/mcp.json`:
+Add to `.cursor/mcp.json` in your project root:
 
 ```json
 {
@@ -38,6 +40,21 @@ Add to `.cursor/mcp.json`:
 
 ```bash
 claude mcp add mermaid -- npx -y mermaid-live-mcp
+```
+
+### Windsurf
+
+Add to `~/.codeium/windsurf/mcp_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "mermaid": {
+      "command": "npx",
+      "args": ["-y", "mermaid-live-mcp"]
+    }
+  }
+}
 ```
 
 ## Tools
@@ -58,7 +75,7 @@ When you ask your AI assistant to create a diagram, `mermaid-live-mcp` will:
 3. Render the diagram as SVG in real-time via WebSocket
 4. Provide download buttons for SVG and PNG export
 
-Updates to a diagram are pushed instantly to the browser -- no page refresh needed.
+Updates to a diagram are pushed instantly to the browser — no page refresh needed.
 
 ## Supported diagram types
 

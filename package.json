@@ -4,7 +4,9 @@
   "scripts": {
     "build": "pnpm -r build",
     "test": "pnpm -r test",
-    "dev": "pnpm -r --parallel dev"
+    "dev": "pnpm -r --parallel dev",
+    "dev:website": "pnpm --filter @sketchdraw/website dev",
+    "build:website": "pnpm --filter @sketchdraw/website build"
   },
   "devDependencies": {
     "typescript": "^5.7.0",

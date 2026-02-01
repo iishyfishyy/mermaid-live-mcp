@@ -1,0 +1,99 @@
+---
+const features = [
+  {
+    icon: '⚡',
+    title: 'MCP Server',
+    description: 'Integrates with any MCP-compatible AI client — Claude Desktop, Cursor, Windsurf, and more.',
+  },
+  {
+    icon: '🧠',
+    title: 'Visualize Any System',
+    description: 'Understanding a new codebase? Ask your AI to generate a diagram on the fly. Instant clarity.',
+  },
+  {
+    icon: '🔄',
+    title: 'Live Server',
+    description: 'Starts a local server with browser preview that auto-refreshes as diagrams are generated.',
+  },
+  {
+    icon: '📊',
+    title: 'Mermaid Syntax',
+    description: 'Supports flowcharts, sequence diagrams, class diagrams, ER diagrams, and more.',
+  },
+  {
+    icon: '📝',
+    title: 'Design Docs on the Fly',
+    description: 'Writing a technical RFC or ideating on architecture? Generate diagrams for your design documents instantly.',
+  },
+  {
+    icon: '📦',
+    title: 'Zero Config',
+    description: 'Works out of the box. Just install, add to your MCP config, and start generating diagrams.',
+  },
+];
+---
+
+<section id="features" class="section">
+  <div class="container">
+    <h2 class="section-title">Everything you need</h2>
+    <p class="section-subtitle">A complete toolkit for generating diagrams in your AI workflow.</p>
+    <div class="features-grid">
+      {features.map((f) => (
+        <div class="feature-card">
+          <div class="feature-icon">{f.icon}</div>
+          <h3 class="feature-title">{f.title}</h3>
+          <p class="feature-desc">{f.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .feature-card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    transition: border-color 0.2s;
+  }
+
+  .feature-card:hover {
+    border-color: var(--color-primary);
+  }
+
+  .feature-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .feature-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .feature-desc {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .features-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

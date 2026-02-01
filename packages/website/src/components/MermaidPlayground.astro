@@ -1,0 +1,174 @@
+---
+const defaultCode = `flowchart LR
+    A[Browser] -->|Request| B{Load Balancer}
+    B --> C[Server 1]
+    B --> D[Server 2]
+    B --> E[Server 3]
+    C --> F[(Database)]
+    D --> F
+    E --> F`;
+---
+
+<section id="playground" class="section">
+  <div class="container">
+    <h2 class="section-title">Try it out</h2>
+    <p class="section-subtitle">Edit the Mermaid syntax below and see it render in real time.</p>
+    <div class="playground">
+      <div class="playground-input">
+        <div class="playground-header">
+          <span class="playground-label">Mermaid Syntax</span>
+        </div>
+        <textarea id="mermaid-input" spellcheck="false">{defaultCode}</textarea>
+      </div>
+      <div class="playground-output">
+        <div class="playground-header">
+          <span class="playground-label">Preview</span>
+          <button id="download-svg" class="btn btn-outline btn-sm" disabled>Download SVG</button>
+        </div>
+        <div id="mermaid-output" class="playground-render">
+          <p class="playground-placeholder">Rendering...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+  mermaid.initialize({
+    startOnLoad: false,
+    theme: 'dark',
+    fontFamily: 'Inter, sans-serif',
+  });
+
+  const input = document.getElementById('mermaid-input') as HTMLTextAreaElement;
+  const output = document.getElementById('mermaid-output')!;
+  const downloadBtn = document.getElementById('download-svg') as HTMLButtonElement;
+  let renderCounter = 0;
+  let debounceTimer: ReturnType<typeof setTimeout>;
+
+  async function renderDiagram() {
+    const code = input.value.trim();
+    if (!code) {
+      output.innerHTML = '<p class="playground-placeholder">Enter Mermaid syntax to see a preview.</p>';
+      downloadBtn.disabled = true;
+      return;
+    }
+
+    renderCounter++;
+    const id = `playground-${renderCounter}`;
+
+    try {
+      const { svg } = await mermaid.render(id, code);
+      output.innerHTML = svg;
+      downloadBtn.disabled = false;
+    } catch {
+      output.innerHTML = '<p class="playground-error">Invalid syntax — check your Mermaid code.</p>';
+      downloadBtn.disabled = true;
+    }
+  }
+
+  input.addEventListener('input', () => {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(renderDiagram, 400);
+  });
+
+  downloadBtn.addEventListener('click', () => {
+    const svg = output.querySelector('svg');
+    if (!svg) return;
+    const blob = new Blob([svg.outerHTML], { type: 'image/svg+xml' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'diagram.svg';
+    a.click();
+    URL.revokeObjectURL(url);
+  });
+
+  renderDiagram();
+</script>
+
+<style>
+  .playground {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    min-height: 400px;
+  }
+
+  .playground-input,
+  .playground-output {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .playground-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .playground-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .btn-sm {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  #mermaid-input {
+    flex: 1;
+    resize: none;
+    background: transparent;
+    color: var(--color-text);
+    border: none;
+    padding: 1.25rem;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    line-height: 1.7;
+    outline: none;
+    min-height: 300px;
+  }
+
+  .playground-render {
+    flex: 1;
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+  }
+
+  .playground-render :global(svg) {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .playground-placeholder,
+  .playground-error {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+
+  .playground-error {
+    color: #ff6b6b;
+  }
+
+  @media (max-width: 768px) {
+    .playground {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

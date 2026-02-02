@@ -1,92 +1,101 @@
-# sketchdraw
+# mermaid-live-mcp
 
-Hand-drawn style diagram generator. Describe diagrams in JSON or Mermaid syntax and get sketchy, hand-drawn SVG/PNG output with optional live browser preview.
+MCP server for generating [Mermaid](https://mermaid.js.org/) diagrams with live browser preview. Renders diagrams in real-time and supports SVG/PNG export.
 
-## Quick start
+<a href="https://npmjs.com/package/mermaid-live-mcp"><img src="https://img.shields.io/npm/v/mermaid-live-mcp" alt="npm version"></a>
 
-### CLI
+## Install
 
-```bash
-npx @sketchdraw/cli render diagram.json -o output.svg
+### Claude Desktop
+
+Add to your [Claude Desktop config](https://modelcontextprotocol.io/quickstart/user) (`~/Library/Application Support/Claude/claude_desktop_config.json` on macOS):
+
+```json
+{
+  "mcpServers": {
+    "mermaid": {
+      "command": "npx",
+      "args": ["-y", "mermaid-live-mcp"]
+    }
+  }
+}
 ```
 
-Or pipe from stdin:
+### Cursor
 
-```bash
-cat diagram.json | npx @sketchdraw/cli render -f png > output.png
+Add to `.cursor/mcp.json` in your project root:
+
+```json
+{
+  "mcpServers": {
+    "mermaid": {
+      "command": "npx",
+      "args": ["-y", "mermaid-live-mcp"]
+    }
+  }
+}
 ```
 
-### MCP server
-
-Works with Claude Desktop, Cursor, and Claude Code. See [`packages/mcp-server`](packages/mcp-server) for setup instructions.
+### Claude Code
 
 ```bash
 claude mcp add mermaid -- npx -y mermaid-live-mcp
 ```
 
-## Example
+### Windsurf
+
+Add to `~/.codeium/windsurf/mcp_config.json`:
 
 ```json
 {
-  "type": "flow",
-  "title": "CI/CD Pipeline",
-  "direction": "LR",
-  "nodes": [
-    { "id": "commit", "label": "Git Commit", "shape": "ellipse" },
-    { "id": "build", "label": "Build", "shape": "rectangle" },
-    { "id": "test", "label": "Run Tests", "shape": "rectangle" },
-    { "id": "check", "label": "Tests Pass?", "shape": "diamond" },
-    { "id": "deploy", "label": "Deploy", "shape": "hexagon" }
-  ],
-  "edges": [
-    { "from": "commit", "to": "build", "label": "trigger" },
-    { "from": "build", "to": "test" },
-    { "from": "test", "to": "check" },
-    { "from": "check", "to": "deploy", "label": "yes" }
-  ]
+  "mcpServers": {
+    "mermaid": {
+      "command": "npx",
+      "args": ["-y", "mermaid-live-mcp"]
+    }
+  }
 }
 ```
 
-## Packages
+## Tools
 
-| Package | Description |
-|---------|-------------|
-| [`@sketchdraw/core`](packages/core) | Diagram parsing, layout, and SVG rendering |
-| [`@sketchdraw/cli`](packages/cli) | Command-line interface |
-| [`@sketchdraw/preview`](packages/preview) | Live browser preview via WebSocket |
-| [`mermaid-live-mcp`](packages/mcp-server) | MCP server for AI assistants |
-| [`@sketchdraw/website`](packages/website) | Documentation site |
+| Tool | Description |
+|------|-------------|
+| `generate_mermaid` | Generate a diagram from Mermaid syntax and open a live preview in the browser |
+| `update_diagram` | Replace a diagram's Mermaid syntax and re-render the live preview |
+| `list_diagrams` | List all diagrams generated in the current session |
+| `export_diagram` | Write a diagram's SVG to disk |
 
-## Diagram types
+## How it works
 
-- Flow diagrams (nodes, edges, groups)
-- Sequence diagrams (participants, messages)
+When you ask your AI assistant to create a diagram, `mermaid-live-mcp` will:
 
-## Node shapes
+1. Parse the Mermaid syntax
+2. Open a browser tab with a live preview
+3. Render the diagram as SVG in real-time via WebSocket
+4. Provide download buttons for SVG and PNG export
 
-`rectangle` `ellipse` `diamond` `cylinder` `cloud` `hexagon` `parallelogram`
+Updates to a diagram are pushed instantly to the browser — no page refresh needed.
 
-## Themes
+## Supported diagram types
 
-| Theme | Style |
-|-------|-------|
-| `hand-drawn` | Sketchy strokes, jitter, cursive font |
-| `clean` | Crisp lines, sans-serif |
-| `minimal` | Thin strokes, minimal weight |
-
-## Output formats
-
-- **SVG** -- vector output (default)
-- **PNG** -- raster export via resvg
+All [Mermaid diagram types](https://mermaid.js.org/intro/) are supported, including flowcharts, sequence diagrams, class diagrams, state diagrams, ER diagrams, Gantt charts, pie charts, git graphs, mindmaps, timelines, and more.
 
 ## Development
 
 ```bash
 pnpm install
 pnpm build
-pnpm test
-pnpm dev        # watch all packages
 ```
+
+### Project structure
+
+| Package | Description |
+|---------|-------------|
+| `packages/mcp-server` | MCP server (published as `mermaid-live-mcp`) |
+| `packages/preview` | Live browser preview via WebSocket |
+| `packages/core` | Diagram parsing, layout, and SVG rendering |
+| `packages/cli` | Command-line interface |
 
 ## License
 

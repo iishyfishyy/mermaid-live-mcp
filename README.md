@@ -4,6 +4,10 @@ MCP server for generating [Mermaid](https://mermaid.js.org/) diagrams with live 
 
 <a href="https://npmjs.com/package/mermaid-live-mcp"><img src="https://img.shields.io/npm/v/mermaid-live-mcp" alt="npm version"></a>
 
+<p align="center">
+  <img src="demo.gif" alt="mermaid-live-mcp demo" width="800" />
+</p>
+
 ## Install
 
 ### Claude Desktop

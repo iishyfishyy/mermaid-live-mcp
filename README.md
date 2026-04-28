@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/iishyfishyy-mermaid-live-mcp-badge.png)](https://mseep.ai/app/iishyfishyy-mermaid-live-mcp)
+
 # mermaid-live-mcp
 
 MCP server for generating [Mermaid](https://mermaid.js.org/) diagrams with live browser preview. Renders diagrams in real-time and supports SVG/PNG export.

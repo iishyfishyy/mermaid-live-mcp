@@ -917,7 +917,7 @@ export class PreviewServer {
 
   async start(): Promise<string> {
     return new Promise((resolve, reject) => {
-      this.httpServer.listen(this.port, () => {
+      this.httpServer.listen(this.port, "127.0.0.1", () => {
         const addr = this.httpServer.address();
         if (addr && typeof addr === "object") {
           this.port = addr.port;

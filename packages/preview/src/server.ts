@@ -738,9 +738,7 @@ const HTML_PAGE = `<!DOCTYPE html>
       var h = svgBaseHeight;
       clone.setAttribute('width', w);
       clone.setAttribute('height', h);
-      if (diagramContainer.classList.contains('dark-canvas')) {
-        clone.style.filter = 'invert(1) hue-rotate(180deg)';
-      }
+      var isDark = diagramContainer.classList.contains('dark-canvas');
       var svgData = new XMLSerializer().serializeToString(clone);
       var dataUrl = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgData);
       var img = new Image();
@@ -751,6 +749,7 @@ const HTML_PAGE = `<!DOCTYPE html>
         canvas.height = h * scale;
         var ctx = canvas.getContext('2d');
         ctx.scale(scale, scale);
+        if (isDark) ctx.filter = 'invert(1) hue-rotate(180deg)';
         ctx.drawImage(img, 0, 0, w, h);
         canvas.toBlob(function(blob) {
           if (!blob) return;

@@ -452,7 +452,7 @@ const HTML_PAGE = `<!DOCTYPE html>
           </svg>
         </div>
         <div class="empty-title">Waiting for a diagram...</div>
-        <div class="empty-subtitle">Use generate_diagram to send a diagram here</div>
+        <div class="empty-subtitle">Use generate_mermaid to send a diagram here</div>
         <div class="dots-loading"><span></span><span></span><span></span></div>
       </div>
 

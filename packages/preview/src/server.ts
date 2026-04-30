@@ -798,12 +798,17 @@ const HTML_PAGE = `<!DOCTYPE html>
     });
 
     /* ── WebSocket connection ── */
+    var myId = new URLSearchParams(location.search).get('id') || '';
+
     function connect() {
       ws = new WebSocket('ws://' + location.host + '/ws');
 
       ws.onopen = function() {
         statusDot.className = 'status-dot connected';
         statusText.textContent = 'Connected';
+        if (myId) {
+          ws.send(JSON.stringify({ type: 'subscribe', id: myId }));
+        }
       };
 
       ws.onmessage = async function(event) {
@@ -873,12 +878,12 @@ const HTML_PAGE = `<!DOCTYPE html>
 export class PreviewServer {
   private httpServer: ReturnType<typeof createServer>;
   private wss: WebSocketServer;
-  private clients: Set<WebSocket> = new Set();
-  private currentContent:
-    | { type: "mermaid"; syntax: string; id: string }
-    | null = null;
+  private subscriptions: Map<WebSocket, string> = new Map();
+  private contents: Map<string, { type: "mermaid"; syntax: string; id: string }> =
+    new Map();
+  private titles: Map<string, string> = new Map();
   private port: number;
-  private title: string = "Sketchdraw Preview";
+  private defaultTitle = "Sketchdraw Preview";
   public onSvgRendered: ((id: string, svg: string) => void) | null = null;
 
   constructor(port = 0) {
@@ -894,15 +899,16 @@ export class PreviewServer {
     this.wss = new WebSocketServer({ server: this.httpServer, path: "/ws" });
 
     this.wss.on("connection", (ws: WebSocket) => {
-      this.clients.add(ws);
-      ws.send(JSON.stringify({ type: "title", title: this.title }));
-      if (this.currentContent) {
-        ws.send(JSON.stringify(this.currentContent));
-      }
       ws.on("message", (raw: Buffer | string) => {
         try {
           const msg = JSON.parse(typeof raw === "string" ? raw : raw.toString());
-          if (msg.type === "svg-result" && msg.id && msg.svg) {
+          if (msg.type === "subscribe" && typeof msg.id === "string") {
+            this.subscriptions.set(ws, msg.id);
+            const title = this.titles.get(msg.id) ?? this.defaultTitle;
+            ws.send(JSON.stringify({ type: "title", title }));
+            const content = this.contents.get(msg.id);
+            if (content) ws.send(JSON.stringify(content));
+          } else if (msg.type === "svg-result" && msg.id && msg.svg) {
             this.onSvgRendered?.(msg.id, msg.svg);
           }
         } catch {
@@ -910,7 +916,7 @@ export class PreviewServer {
         }
       });
       ws.on("close", () => {
-        this.clients.delete(ws);
+        this.subscriptions.delete(ws);
       });
     });
   }
@@ -929,28 +935,29 @@ export class PreviewServer {
     });
   }
 
-  private broadcast(message: object): void {
+  private broadcastToId(id: string, message: object): void {
     const data = JSON.stringify(message);
-    for (const client of this.clients) {
-      if (client.readyState === 1) {
+    for (const [client, subId] of this.subscriptions) {
+      if (subId === id && client.readyState === 1) {
         client.send(data);
       }
     }
   }
 
-  setTitle(title: string): void {
-    this.title = title;
-    this.broadcast({ type: "title", title });
+  setTitle(id: string, title: string): void {
+    this.titles.set(id, title);
+    this.broadcastToId(id, { type: "title", title });
   }
 
   updateMermaid(id: string, syntax: string, title?: string): void {
-    if (title) this.setTitle(title);
-    this.currentContent = { type: "mermaid", syntax, id };
-    this.broadcast(this.currentContent);
+    if (title) this.setTitle(id, title);
+    const content = { type: "mermaid" as const, syntax, id };
+    this.contents.set(id, content);
+    this.broadcastToId(id, content);
   }
 
-  openBrowser(): void {
-    const url = `http://localhost:${this.port}`;
+  openBrowser(id: string): void {
+    const url = `http://localhost:${this.port}/?id=${encodeURIComponent(id)}`;
     const platform = process.platform;
     const cmd =
       platform === "darwin"
@@ -962,9 +969,10 @@ export class PreviewServer {
   }
 
   async stop(): Promise<void> {
-    for (const client of this.clients) {
+    for (const client of this.subscriptions.keys()) {
       client.close();
     }
+    this.subscriptions.clear();
     this.wss.close();
     return new Promise((resolve) => {
       this.httpServer.close(() => resolve());

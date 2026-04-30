@@ -22,30 +22,36 @@ function generateId(): string {
   return `diagram_${nextId++}`;
 }
 
-// ── Live preview (per-diagram servers) ──
-const previewServers = new Map<string, { server: PreviewServer; url: string }>();
+// ── Live preview (single shared server, one tab per diagram id) ──
+let previewServer: { server: PreviewServer; url: string } | null = null;
+const openedTabs = new Set<string>();
+const pendingRenders = new Map<string, () => void>();
 
-async function ensurePreviewForDiagram(
-  id: string
-): Promise<{ server: PreviewServer; url: string } | null> {
-  const existing = previewServers.get(id);
-  if (existing) return existing;
+async function ensurePreviewServer(): Promise<{
+  server: PreviewServer;
+  url: string;
+} | null> {
+  if (previewServer) return previewServer;
 
   const preview = new PreviewServer();
   preview.onSvgRendered = (diagId: string, svg: string) => {
     const stored = diagrams.get(diagId);
     if (stored) stored.svg = svg;
+    pendingRenders.get(diagId)?.();
+    pendingRenders.delete(diagId);
   };
 
   try {
     const url = await preview.start();
-    const entry = { server: preview, url };
-    previewServers.set(id, entry);
-    preview.openBrowser();
-    return entry;
+    previewServer = { server: preview, url };
+    return previewServer;
   } catch {
     return null;
   }
+}
+
+function tabUrl(baseUrl: string, id: string): string {
+  return `${baseUrl}/?id=${encodeURIComponent(id)}`;
 }
 
 async function pushMermaidToPreview(
@@ -53,10 +59,27 @@ async function pushMermaidToPreview(
   syntax: string,
   title?: string
 ): Promise<string | null> {
-  const entry = await ensurePreviewForDiagram(id);
+  const entry = await ensurePreviewServer();
   if (!entry) return null;
   entry.server.updateMermaid(id, syntax, title);
-  return entry.url;
+  if (!openedTabs.has(id)) {
+    openedTabs.add(id);
+    entry.server.openBrowser(id);
+  }
+  return tabUrl(entry.url, id);
+}
+
+function waitForSvg(id: string, timeoutMs = 2500): Promise<void> {
+  return new Promise((resolve) => {
+    const timer = setTimeout(() => {
+      pendingRenders.delete(id);
+      resolve();
+    }, timeoutMs);
+    pendingRenders.set(id, () => {
+      clearTimeout(timer);
+      resolve();
+    });
+  });
 }
 
 // ── MCP Server ──
@@ -90,6 +113,7 @@ server.tool(
     const preview = await pushMermaidToPreview(id, syntax, title);
     const storedDiagram = diagrams.get(id);
     if (storedDiagram && preview) storedDiagram.previewUrl = preview;
+    if (preview) await waitForSvg(id);
 
     const responseLines = [`Mermaid diagram sent to preview.`, `ID: ${id}`];
     if (preview) {
@@ -137,6 +161,7 @@ server.tool(
     stored.svg = "";
 
     const preview = await pushMermaidToPreview(diagram_id, syntax, title);
+    if (preview) await waitForSvg(diagram_id);
 
     const responseLines = [`Diagram ${diagram_id} updated successfully.`];
     if (preview) {
@@ -248,19 +273,19 @@ main().catch((err) => {
 });
 
 // ── Graceful shutdown ──
-async function shutdownAllPreviews(): Promise<void> {
-  const stops = Array.from(previewServers.values()).map(({ server }) =>
-    server.stop()
-  );
-  await Promise.allSettled(stops);
-  previewServers.clear();
+async function shutdownPreview(): Promise<void> {
+  if (!previewServer) return;
+  await previewServer.server.stop();
+  previewServer = null;
+  openedTabs.clear();
+  pendingRenders.clear();
 }
 
 process.on("SIGINT", async () => {
-  await shutdownAllPreviews();
+  await shutdownPreview();
   process.exit(0);
 });
 process.on("SIGTERM", async () => {
-  await shutdownAllPreviews();
+  await shutdownPreview();
   process.exit(0);
 });
